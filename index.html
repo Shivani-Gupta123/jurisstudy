@@ -5,9 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="kkPrsqO1BDtmu5fAgxRtP1DIFmDLihnMu4S2rIV17dk" />
-  <meta name="description" content="We help law students and professionals lead successful careers in research and analysis." />
-  <link rel="shortcut icon" href="images/jurislogo-removebg-preview.png" type="image/x-icon" />
   <title>jurisstudy</title>
+  <meta name="description" content="We help law students and professionals lead successful careers in research and analysis." />
+  <link rel="icon" href="images/jurislogo-removebg-preview.png" type="image/x-icon" />
   <link rel="stylesheet" href="./style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -345,15 +345,16 @@ button:hover {
   <div class="nav">
     <div class="nav_main">
       <div style="width: 1000px; padding: 20px; padding-right: 20px;" class="nav_1">
-        <ul>
-          <li><a href="#">HOME</a></li>
-          <li><a href="about.html">ABOUT US</a></li>
-          <li><a href="#">RESEARCH AND ACADEMIA</a></li>
-          <li><a href="#">OUR SERVICES</a></li>
-          <li><a href="#">WORK SAMPLES</a></li>
-          <li><a href="#">CONTACT US</a></li>
-          <li><a href="#">BLOG</a></li>
-        </ul>
+        <button id="toggle-menu" aria-label="Toggle Menu">☰</button>
+            <ul id="navbar-menu">
+                <li><a href="#">HOME</a></li>
+                <li><a href="about.html">ABOUT US</a></li>
+                <li><a href="#">RESEARCH AND ACADEMIA</a></li>
+                <li><a href="#">OUR SERVICES</a></li>
+                <li><a href="#">WORK SAMPLES</a></li>
+                <li><a href="#">CONTACT US</a></li>
+                <li><a href="#">BLOG</a></li>
+            </ul>
       </div>
       <div class="nav_2">
         <input type="search" name="" id="" placeholder="Search" />
@@ -444,11 +445,14 @@ button:hover {
   <div class="offer">
     <div class="offer_main">
       <div class="offer_1">
-        <h1>What We Offer</h1>
-        <p class="offer_p">
-          Adopting a way forward approach we provide you with a well-equipped legal research training program and services like writing research papers, articles, essays, preparing dissertations, thesis, case studies moot court memorials, etc.
-
-        </p>
+        <div style="text-align: center;" class="offers">
+          <h1>What We Offer</h1>
+          <p class="offer_p">
+            Adopting a way forward approach we provide you with a well-equipped legal research training program and services like writing research papers, articles, essays, preparing dissertations, thesis, case studies moot court memorials, etc.
+  
+          </p>
+        </div>
+     
         <!-- ****************************************** -->
         <div class="offer_mid_col">
           <!-- ****************************************** -->
@@ -545,7 +549,7 @@ Our law tech experts help you throughout the journey of law school and help you 
       <div class="univ_main1">
         <div class="univ_main1_col1">
           <video controls>
-            <source src="./images/Introducing Stanley.mp4" type="video/mp4" />
+            <source src="" type="video/mp4" />
           </video>
         </div>
         <div class="univ_main1_col2">
@@ -562,9 +566,14 @@ Our law tech experts help you throughout the journey of law school and help you 
             Beyond just writing, we are here to guide you with customized study materials and resources to help you grow into a confident research expert, make your legal research journey smooth with our personal touch, and help meet your unique requirements.
 
           </p>
+          <a href="https://wa.me/918585915496?text=Hello, I would like to connect." target="_blank">
+            <button>Book An Appointment Now</button>
+          </a>
         </div>
       </div>
-      <div class="univ_main2">
+
+   
+      <!-- <div class="univ_main2">
         <div class="univ_main2_col1">
           <h1>18</h1>
           <p>Certified Teachers</p>
@@ -581,7 +590,7 @@ Our law tech experts help you throughout the journey of law school and help you 
           <h1>50</h1>
           <p>Awards Won</p>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
   <!-- ****************************************** -->
@@ -998,6 +1007,14 @@ form.onsubmit = function(event) {
 
 
     </script>
+
+<script>
+  document.getElementById('toggle-menu').addEventListener('click', function() {
+      const nav = document.querySelector('.nav_1');
+      nav.classList.toggle('active');
+  });
+</script>
+
  
     <!-- ****************************************** -->
 
