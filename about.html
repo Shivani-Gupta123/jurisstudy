@@ -4,12 +4,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3976/3976631.png" type="image/x-icon" />
-  <title>jurisstudy </title>
+  <meta name="google-site-verification" content="kkPrsqO1BDtmu5fAgxRtP1DIFmDLihnMu4S2rIV17dk" />
+  <title>jurisstudy</title>
+  <meta name="description" content="We help law students and professionals lead successful careers in research and analysis." />
+  <link rel="icon" href="images/jurislogo-removebg-preview.png" type="image/x-icon" />
   <link rel="stylesheet" href="./style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <style>
       /* Container for the contact buttons */
 .contact-buttons {
@@ -25,7 +28,7 @@
  #whatsapp {
 position: fixed;
 /*right: 0;*/
-/* left: 50px; */
+left: 10px;
 bottom: 4%;
 width: 70px;
 height: 70px;
@@ -156,7 +159,7 @@ animation: zcwphone2 1.5s linear infinite;
         -moz-animation: zcwmini2 1.5s 0s ease-out infinite;
         animation: zcwmini2 1.5s 0s ease-out infinite;
         }
-        .fixed-phone-icon:before {
+        .fixed-phone-icon #phoneicon:before {
         content: "";
         position: absolute;
         width: 100%;
@@ -299,6 +302,120 @@ button:hover {
     background-color: #0056b3;
 }
 
+.testimonials {
+    background-color: #f8f9fa;
+    padding: 40px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #343a40;
+}
+
+.testimonial-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.testimonial {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    transition: transform 0.3s;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial p {
+    font-style: italic;
+    color: #6c757d;
+}
+
+.testimonial h4 {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #343a40;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .testimonial-container {
+        flex-direction: row;
+        justify-content: center;
+        gap: 40px;
+    }
+}
+
+#subscribeMessage {
+    margin-top: 10px;
+    color: green;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+.about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: #f8f9fa;
+}
+
+.about-content {
+    flex: 1;
+    max-width: 600px;
+    padding: 20px;
+    text-align: left;
+}
+
+.about-content h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #343a40;
+}
+
+.about-content p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #6c757d;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px 10px rgba(211, 97, 25, 0.1);
+}
+
+
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .about-us {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1024px) {
+   .about-image{
+    margin-left: 90px;
+   }
+}
 
     </style>
 </head>
@@ -308,7 +425,7 @@ button:hover {
   <div class="header">
     <div class="header_main">
       <div class="header_1">
-        <img src="./images/logo.png" />
+        <img style="height: 160px; width: 170px;" src="images/jurislogo-removebg-preview.png" />
       </div>
       <!-- ****************************************** -->
       <div class="header_2">
@@ -333,21 +450,24 @@ button:hover {
       </div>
       <!-- ****************************************** -->
       <div id="apply-now-btn" class="header_3">
-        <button type="button">Apply Now</button>
+        <button type="button">Let's Connect</button>
       </div>
     </div>
   </div>
   <!-- ****************************************** -->
   <div class="nav">
     <div class="nav_main">
-      <div class="nav_1">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
+      <div style="width: 1000px; padding: 20px; padding-right: 20px;" class="nav_1">
+        <button id="toggle-menu" aria-label="Toggle Menu">☰</button>
+            <ul id="navbar-menu">
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="about.html">ABOUT US</a></li>
+              <li><a href="research.html">RESEARCH AND ACADEMIA</a></li>
+              <li><a href="services.html">OUR SERVICES</a></li>
+              <li><a href="worksample.html">WORK SAMPLES</a></li>
+              <li><a href="contact.html">CONTACT US</a></li>
+              <li><a href="blog.html">BLOG</a></li>
+            </ul>
       </div>
       <div class="nav_2">
         <input type="search" name="" id="" placeholder="Search" />
@@ -357,10 +477,10 @@ button:hover {
 
 
   <div id="whatsapp">
-    <a href="https://wa.me/8585915496"><div id="whatsappMain"></div></a>
+    <a href="https://wa.me/918585915496?text=Hello, I would like to connect."><div id="whatsappMain"></div></a>
 </div>
 <div class="fixed-phone-icon">
-    <a href="tel:8585915496"></a>
+    <a href="tel:+918585915496"><div id="phoneicon"></div></a>
 </div>
   <!-- ****************************************** -->
 
@@ -386,33 +506,49 @@ button:hover {
     </div>
 </div>
 
-<div>
-    <h1 style="text-align: center;">About Us</h1>
-    <p style="text-align: center; margin: 20px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste labore laudantium aperiam quidem, corporis hic culpa mollitia nulla cupiditate ipsum. Aut ad facere at! Rerum iure quis voluptatibus reiciendis assumenda.</p>
-</div>
- 
+  
+<section class="about-us">
+  <div class="about-content">
+      <h2>About Us</h2>
+      <p>
+        Welcome to a place where your legal research challenges are understood and solved, with care.
+        We know, that every law student and professional has unique needs so our approach is all about you.
+        
+        Whether you need help writing a research paper, crafting a dissertation, or completing your thesis, we’ll work closely with you to make the process easier and more fulfilling.
+      </p>
+      <p>
+        Beyond just writing, we are here to guide you with customized study materials and resources to help you grow into a confident research expert, make your legal research journey smooth with our personal touch, and help meet your unique requirements.
+      </p>
+  </div>
+  <div class="about-image">
+      <img style="height: 400px; width: 400px;" src="./images/about.jpg" alt="About Us Image">
+  </div>
+</section>
+
+
+  
     <!-- ****************************************** -->
     <div class="Footer">
       <div class="Footer_main">
         <!-- ************************* -->
         <div class="Footer_col1">
-          <h2 style="color: #fff;">Have a Questions?
+          <h2 style="color: white;">Have a Questions?
           </h2>
-          <p> <i class="fa-solid fa-location-dot"></i> 203 Fake St. Mountain
+          <p> <i class="fa-solid fa-location-dot"></i>
           </p>
-          <p> <i class="fa-solid fa-phone"></i> +2 392 3929 210</p>
-          <p><i class="fa-solid fa-envelope"></i> info@yourdomain.com</p>
+          <p> <i class="fa-solid fa-phone"></i>+91 8585915496</p>
+          <p><i class="fa-solid fa-envelope"></i>info.jurisstudy@gmail.com</p>
         </div>
         <!-- ************************* -->
-        <div class="Footer_col2">
-          <h2 style="color: #fff;">Recent Blog</h2>
+        <!-- <div class="Footer_col2">
+          <h2>Recent Blog</h2>
           <div class="Footer_col2_main">
             <div class="Footer_col2_mid1">
               <img src="./images/image_1.jpg" alt="">
             </div>
-            <!-- ************************* -->
+           
             <div class="Footer_col2_mid2">
-              <h3 style="color: #fff;">Even the all-powerful Pointing has no control about</h3>
+              <h3>Even the all-powerful Pointing has no control about</h3>
               <p> <i class="fa-solid fa-calendar"></i> June 27, 2019</p>
               <p><i class="fa-solid fa-user"></i> Admin <i class="fa-solid fa-message"></i> 19</p>
             </div>
@@ -421,41 +557,46 @@ button:hover {
             <div class="Footer_col2_mid1">
               <img src="./images/image_2.jpg" alt="">
             </div>
-            <!-- ************************* -->
+           
             <div class="Footer_col2_mid2">
-              <h3 style="color: #fff;">Even the all-powerful Pointing has no control about</h3>
+              <h3>Even the all-powerful Pointing has no control about</h3>
               <p> <i class="fa-solid fa-calendar"></i> June 27, 2019</p>
               <p><i class="fa-solid fa-user"></i> Admin <i class="fa-solid fa-message"></i> 19</p>
             </div>
           </div>
-        </div>
+        </div> -->
         <!-- ************************* -->
         <div class="Footer_col3">
-          <h2 style="color: #fff;">Quick Links</h2>
+          <h2 style="color: white;">Quick Links</h2>
           <ul>
-            <li><i style="color: #fff;" class="fa-solid fa-arrow-right"></i> <a href="#">Home</a></li>
-            <li><i style="color: #fff;" class="fa-solid fa-arrow-right"></i> <a href="#">About</a></li>
-            <li><i style="color: #fff;" class="fa-solid fa-arrow-right"></i> <a href="#">Courses</a></li>
-            <li><i style="color: #fff;" class="fa-solid fa-arrow-right"></i> <a href="#">Staff</a></li>
-            <li><i style="color: #fff;" class="fa-solid fa-arrow-right"></i> <a href="#">Blog</a></li>
-            <li><i style="color: #fff;" class="fa-solid fa-arrow-right"></i> <a href="#">Contact</a></li>
+            <li><i style="color: white;" class="fa-solid fa-arrow-right"></i> <a href="index.html">Home</a></li>
+            <li><i style="color: white;" class="fa-solid fa-arrow-right"></i> <a href="about.html">About Us</a></li>
+            <li><i style="color: white;" class="fa-solid fa-arrow-right"></i> <a href="research.html">Research and Academia</a></li>
+            <li><i style="color: white;" class="fa-solid fa-arrow-right"></i> <a href="services.html">Our Services</a></li>
+            <li><i style="color: white;" class="fa-solid fa-arrow-right"></i> <a href="contact.html">Contact Us</a></li>
+            <li><i style="color: white;" class="fa-solid fa-arrow-right"></i> <a href="worksample.html">Work Samples</a></li>
+            <li><i style="color: white;" class="fa-solid fa-arrow-right"></i> <a href="blog.html">Blog</a></li>
           </ul>
         </div>
         <!-- ************************* -->
         <div class="Footer_col4">
-          <h2 style="color: #fff;">Subscribe Us!</h2>
+          <h2 style="color: white;">Subscribe Us!</h2>
           <input type="email" name="" id="" placeholder="Enter Your Email">
-          <button>Subscribe</button>
-          <h2 style="color: #fff;">Connect With Us </h2>
+          <button id="subscribeBtn">Subscribe</button>
+          <p id="subscribeMessage" class="hidden"></p>
+          <h2 style="color: white;">Connect With Us </h2>
           <div class="social_icons">
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-instagram"></i>
+            <a href="https://www.instagram.com/info.jurisstudy/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/people/Jurisstudy/61566563361135/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://wa.me/918585915496"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/company/jurisstudy/"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.youtube.com/@jurisstudy"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://medium.com/@info.jurisstudy"><i class="fa-brands fa-medium"></i></a>
           </div>
         </div>
       </div>
       <div class="Footer_last">
-        <p>Copyright ©2023 All rights reserved <b> WaleedCodes</b></p>
+        <p>Copyright ©2023 All rights reserved <b></b></p>
       </div>
     </div>
 
@@ -500,6 +641,37 @@ form.onsubmit = function(event) {
 
 
     </script>
+
+<script>
+  document.getElementById('toggle-menu').addEventListener('click', function() {
+      const nav = document.querySelector('.nav_1');
+      nav.classList.toggle('active');
+  });
+</script>
+
+<script>
+  document.getElementById("subscribeBtn").addEventListener("click", function() {
+      const emailInput = document.getElementById("emailInput");
+      const email = emailInput.value;
+  
+      if (validateEmail(email)) {
+          // Here, you can send the email to your server-side script using fetch or XMLHttpRequest
+          // For demonstration, we will just display a success message
+          document.getElementById("subscribeMessage").innerText = "Successfully subscribed!";
+          document.getElementById("subscribeMessage").classList.remove("hidden");
+          emailInput.value = ""; // Clear the input
+      } else {
+          alert("Please enter a valid email address.");
+      }
+  });
+  
+  // Simple email validation function
+  function validateEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(String(email).toLowerCase());
+  }
+  </script>
+  
  
     <!-- ****************************************** -->
 
