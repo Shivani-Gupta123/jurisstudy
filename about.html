@@ -391,15 +391,33 @@ button:hover {
     color: #6c757d;
 }
 
-.about-image {
+/* .about-image {
     flex: 1;
 }
 
 .about-image img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 1px;
     box-shadow: 10px 10px 10px 10px rgba(211, 97, 25, 0.1);
+} */
+
+.about-image {
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center;     /* Center the image vertically */
+    border-right: 15px solid #dc740d; /* Dark right border */
+    border-bottom: 15px solid #d1630f; /* Dark bottom border */
+    padding: 10px;           /* Padding inside the border */
+    border-radius: 1px;     /* Rounded corners for the border */
+    box-shadow: 20px 20px 20px 20px rgba(216, 121, 31, 0.1); /* Subtle shadow */
+}
+
+.about-image img {
+    height: 400px; 
+    width: 400px; 
+    border-radius: 1px; /* Rounded corners for the image */
+    object-fit: fill;    /* Ensures the image covers the area without distortion */
 }
 
 
