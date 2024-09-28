@@ -401,26 +401,49 @@ button:hover {
     </div>
   </div>
   <!-- ****************************************** -->
-  <div class="nav">
+  <!-- <div class="nav">
     <div class="nav_main">
       <div style="width: 1000px; padding: 20px; padding-right: 20px;" class="nav_1">
         <button id="toggle-menu" aria-label="Toggle Menu">☰</button>
-            <ul id="navbar-menu">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="#">RESEARCH AND ACADEMIA</a></li>
-                <li><a href="services.html">OUR SERVICES</a></li>
-                <li><a href="#">WORK SAMPLES</a></li>
-                <li><a href="contact.html">CONTACT US</a></li>
-                <li><a href="blog.html">BLOG</a></li>
-            </ul>
+        <ul id="navbar-menu">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="#">RESEARCH AND ACADEMIA</a></li>
+          <li><a href="services.html">OUR SERVICES</a></li>
+          <li><a href="#">WORK SAMPLES</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+          <li><a href="blog.html">BLOG</a></li>
+        </ul>
       </div>
       <div class="nav_2">
         <input type="search" name="" id="" placeholder="Search" />
       </div>
     </div>
-  </div>
-
+  </div> -->
+  <nav class="navbar">
+    <div class="nav_main">
+      <button id="toggle-menu" aria-label="Toggle Menu">☰</button>
+      
+      <!-- Menu links -->
+      <ul id="navbar-menu">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT US</a></li>
+        <li><a href="#">RESEARCH AND ACADEMIA</a></li>
+        <li><a href="services.html">OUR SERVICES</a></li>
+        <li><a href="#">WORK SAMPLES</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+        <li><a href="blog.html">BLOG</a></li>
+      </ul>
+      
+      <!-- Search bar -->
+      <div class="nav_2">
+        <input type="search" name="" id="search-input" placeholder="Search" />
+      </div>
+    </div>
+  </nav>
+  
+  
+  
 
   <div id="whatsapp">
     <a href="https://wa.me/918585915496?text=Hello, I would like to connect."><div id="whatsappMain"></div></a>
@@ -460,7 +483,7 @@ button:hover {
         We help law students and professionals lead successful careers in research and analysis.
       </p>
       <a href="https://wa.me/918585915496?text=Hello, I would like to connect." target="_blank">
-        <button>Let's Connect</button>
+        <button>Explore More</button>
       </a>
       
     </div>
@@ -824,7 +847,7 @@ Get a well-customized moot court memorial and shine at the top of your law schoo
     </div>
   </div>
   <!-- ****************************************** -->
-  <div class="Form">
+ 
     <!-- <div class="Form0">
       <div class="Form_Main">
         <div class="Form_col1"></div>
@@ -946,8 +969,7 @@ Get a well-customized moot court memorial and shine at the top of your law schoo
         <div class="Footer_col1">
           <h2>Have a Questions?
           </h2>
-          <p> <i class="fa-solid fa-location-dot"></i>
-          </p>
+          <p> <i class="fa-solid fa-location-dot"></i> Alpha 1 Commercial Belt, Greater Noida</p>
           <p> <i class="fa-solid fa-phone"></i>+91 8585915496</p>
           <p><i class="fa-solid fa-envelope"></i>info.jurisstudy@gmail.com</p>
         </div>
@@ -1008,7 +1030,7 @@ Get a well-customized moot court memorial and shine at the top of your law schoo
         </div>
       </div>
       <div class="Footer_last">
-        <p>Copyright ©2023 All rights reserved <b></b></p>
+        <p>Copyright ©2023 All rights reserved <b>https://jurisstudy.com/</b></p>
       </div>
     </div>
 
@@ -1055,10 +1077,22 @@ form.onsubmit = function(event) {
     </script>
 
 <script>
-  document.getElementById('toggle-menu').addEventListener('click', function() {
-      const nav = document.querySelector('.nav_1');
-      nav.classList.toggle('active');
-  });
+document.getElementById("toggle-menu").addEventListener("click", function() {
+  const navbarMenu = document.getElementById("navbar-menu");
+  const toggleButton = document.getElementById("toggle-menu");
+
+  // Toggle the active class for menu visibility
+  navbarMenu.classList.toggle("active");
+
+  // Change the button text between ☰ (menu) and ✖ (close)
+  if (navbarMenu.classList.contains("active")) {
+    toggleButton.textContent = "✖"; // Change to close icon
+  } else {
+    toggleButton.textContent = "☰"; // Change back to menu icon
+  }
+});
+
+
 </script>
 
 <script>
