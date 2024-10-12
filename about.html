@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="kkPrsqO1BDtmu5fAgxRtP1DIFmDLihnMu4S2rIV17dk" />
-  <title>jurisstudy</title>
+  <title>jurisstudy-aboutus</title>
   <meta name="description" content="We help law students and professionals lead successful careers in research and analysis." />
   <link rel="icon" href="images/jurislogo-removebg-preview.png" type="image/x-icon" />
   <link rel="stylesheet" href="./style.css" />
@@ -14,6 +14,114 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <style>
+    
+    /* General navbar styling */
+.navbar {
+  background-color: var(--dark-color); /* Replace with your color */
+  width: 100%;
+}
+
+.nav_main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+/* Styling for the menu list */
+#navbar-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar-menu li {
+  margin: 0 1rem;
+}
+
+#navbar-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+#navbar-menu a:hover {
+  color: var(--primary-color); /* Replace with your hover color */
+}
+
+/* Search bar styling */
+.nav_2 input {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 1rem;
+  background-color: #fff;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  /* Hide menu by default and change layout */
+  #navbar-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--dark-color);
+    z-index: 1000;
+    padding: 1rem 0;
+  }
+
+  #navbar-menu.active {
+    display: flex; /* Show the menu when active */
+  }
+
+  #navbar-menu li {
+    margin: 1rem 0; /* Vertical spacing for mobile view */
+    text-align: center;
+  }
+
+  /* Toggle button styling */
+  #toggle-menu {
+    display: flex;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  /* Responsive search bar */
+  .nav_2 {
+    margin-top: 1rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav_2 input {
+    width: 90%;
+  }
+}
+
+/* Hide toggle button and adjust layout for larger screens */
+@media (min-width: 769px) {
+  #toggle-menu {
+    display: none;
+  }
+
+  .nav_2 {
+    margin-left: auto;
+  }
+
+  .nav_2 input {
+    width: 200px;
+  }
+}
+
       /* Container for the contact buttons */
 .contact-buttons {
     position: fixed;
@@ -28,7 +136,7 @@
  #whatsapp {
 position: fixed;
 /*right: 0;*/
-left: 10px;
+left: 1250px;
 bottom: 4%;
 width: 70px;
 height: 70px;
@@ -140,112 +248,7 @@ animation: zcwphone2 1.5s linear infinite;
 100% {box-shadow: 0 0 8px 6px rgba(207,8,8, 0), 0 0 0 40px rgba(0,0,0,0), 0 0 0 40px rgba(207,8,8, 0);}
 }
 
-.fixed-phone-icon {
-        -moz-border-radius: 50% !important;
-        -webkit-border-radius: 50% !important;
-        border-radius: 50% !important;
-        -moz-background-clip: padding;
-        -webkit-background-clip: padding-box;
-        background-clip: padding-box;
-        background-color: rgba(255, 255, 255, 0);
-        position: fixed;
-        right: 20px;
-        bottom: 25px;
-        width: 70px;
-        height: 70px;
-        color: #40c351;
-        z-index: 9;
-        -webkit-animation: zcwmini2 1.5s 0s ease-out infinite;
-        -moz-animation: zcwmini2 1.5s 0s ease-out infinite;
-        animation: zcwmini2 1.5s 0s ease-out infinite;
-        }
-        .fixed-phone-icon #phoneicon:before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0px;
-        left: 0;
-        z-index: 1000;
-         background-image: url(images/icons8-phone-48.png);
-        background-repeat: no-repeat;
-        background-position: center center;
-        -webkit-animation: zcwphone2 1.5s linear infinite;
-        -moz-animation: zcwphone2 1.5s linear infinite;
-        animation: zcwphone2 1.5s linear infinite;
-        }
-        @-webkit-keyframes zcwphone {
-        0% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
-        25% {-ms-transform:rotate(30deg);-webkit-transform:rotate(30deg);transform:rotate(30deg);}
-        50% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
-        75% {-ms-transform:rotate(-30deg);-webkit-transform:rotate(-30deg);transform:rotate(-30deg);}
-        100% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
-        }
-        @-moz-keyframes zcwphone {
-        0% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
-        25% {-ms-transform:rotate(30deg);-webkit-transform:rotate(30deg);transform:rotate(30deg);}
-        50% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
-        75% {-ms-transform:rotate(-30deg);-webkit-transform:rotate(-30deg);transform:rotate(-30deg);}
-        100% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
-        }
-        @keyframes zcwphone {
-        0% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
-        25% {-ms-transform:rotate(30deg);-webkit-transform:rotate(30deg);transform:rotate(30deg);}
-        50% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
-        75% {-ms-transform:rotate(-30deg);-webkit-transform:rotate(-30deg);transform:rotate(-30deg);}
-        100% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
-        }
-        @-webkit-keyframes zcwphone2 {
-        0% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
-        25% {-ms-transform:rotate(30deg);-webkit-transform:rotate(30deg);transform:rotate(30deg);}
-        50% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
-        75% {-ms-transform:rotate(-30deg);-webkit-transform:rotate(-30deg);transform:rotate(-30deg);}
-        100% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
-        }
-        @-moz-keyframes zcwphone2 {
-        0% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
-        25% {-ms-transform:rotate(30deg);-webkit-transform:rotate(30deg);transform:rotate(30deg);}
-        50% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
-        75% {-ms-transform:rotate(-30deg);-webkit-transform:rotate(-30deg);transform:rotate(-30deg);}
-        100% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
-        }
-        @keyframes zcwphone2 {
-        0% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
-        25% {-ms-transform:rotate(30deg);-webkit-transform:rotate(30deg);transform:rotate(30deg);}
-        50% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
-        75% {-ms-transform:rotate(-30deg);-webkit-transform:rotate(-30deg);transform:rotate(-30deg);}
-        100% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
-        }
-        @-webkit-keyframes zcwmini {
-        0% {box-shadow: 0 0 8px 6px rgba(207,8,8, 0), 0 0 0 0 rgba(0,0,0,0), 0 0 0 0 rgba(207,8,8, 0);}
-        10% {box-shadow: 0 0 8px 6px , 0 0 12px 10px rgba(0,0,0,0), 0 0 12px 14px ;}
-        100% {box-shadow: 0 0 8px 6px rgba(207,8,8, 0), 0 0 0 40px rgba(0,0,0,0), 0 0 0 40px rgba(207,8,8, 0);}
-        }
-        @-moz-keyframes zcwmini {
-        0% {box-shadow: 0 0 8px 6px rgba(207,8,8, 0), 0 0 0 0 rgba(0,0,0,0), 0 0 0 0 rgba(207,8,8, 0);}
-        10% {box-shadow: 0 0 8px 6px , 0 0 12px 10px rgba(0,0,0,0), 0 0 12px 14px ;}
-        100% {box-shadow: 0 0 8px 6px rgba(207,8,8, 0), 0 0 0 40px rgba(0,0,0,0), 0 0 0 40px rgba(207,8,8, 0);}
-        }
-        @keyframes zcwmini {
-        0% {box-shadow: 0 0 8px 6px rgba(207,8,8, 0), 0 0 0 0 rgba(0,0,0,0), 0 0 0 0 rgba(207,8,8, 0);}
-        10% {box-shadow: 0 0 8px 6px , 0 0 12px 10px rgba(0,0,0,0), 0 0 12px 14px ;}
-        100% {box-shadow: 0 0 8px 6px rgba(207,8,8, 0), 0 0 0 40px rgba(0,0,0,0), 0 0 0 40px rgba(207,8,8, 0);}
-        }
-        @-webkit-keyframes zcwmini2 {
-        0% {box-shadow: 0 0 8px 6px rgba(207,8,8, 0), 0 0 0 0 rgba(0,0,0,0), 0 0 0 0 rgba(207,8,8, 0);}
-        10% {box-shadow: 0 0 8px 6px , 0 0 12px 10px rgba(0,0,0,0), 0 0 12px 14px ;}
-        100% {box-shadow: 0 0 8px 6px rgba(207,8,8, 0), 0 0 0 40px rgba(0,0,0,0), 0 0 0 40px rgba(207,8,8, 0);}
-        }
-        @-moz-keyframes zcwmini2 {
-        0% {box-shadow: 0 0 8px 6px rgba(207,8,8, 0), 0 0 0 0 rgba(0,0,0,0), 0 0 0 0 rgba(207,8,8, 0);}
-        10% {box-shadow: 0 0 8px 6px , 0 0 12px 10px rgba(0,0,0,0), 0 0 12px 14px ;}
-        100% {box-shadow: 0 0 8px 6px rgba(207,8,8, 0), 0 0 0 40px rgba(0,0,0,0), 0 0 0 40px rgba(207,8,8, 0);}
-        }
-        @keyframes zcwmini2 {
-        0% {box-shadow: 0 0 8px 6px rgba(207,8,8, 0), 0 0 0 0 rgba(0,0,0,0), 0 0 0 0 rgba(207,8,8, 0);}
-        10% {box-shadow: 0 0 8px 6px , 0 0 12px 10px rgba(0,0,0,0), 0 0 12px 14px ;}
-        100% {box-shadow: 0 0 8px 6px rgba(207,8,8, 0), 0 0 0 40px rgba(0,0,0,0), 0 0 0 40px rgba(207,8,8, 0);}
-        }
+
 
         /* Basic styling for the menu */
 /* Modal Container */
@@ -473,25 +476,28 @@ button:hover {
     </div>
   </div>
   <!-- ****************************************** -->
-  <div class="nav">
-    <div class="nav_main">
-      <div style="width: 1000px; padding: 20px; padding-right: 20px;" class="nav_1">
-        <button id="toggle-menu" aria-label="Toggle Menu">☰</button>
-            <ul id="navbar-menu">
-              <li><a href="index.html">HOME</a></li>
-              <li><a href="about.html">ABOUT US</a></li>
-              <li><a href="research.html">RESEARCH AND ACADEMIA</a></li>
-              <li><a href="services.html">OUR SERVICES</a></li>
-              <li><a href="worksample.html">WORK SAMPLES</a></li>
-              <li><a href="contact.html">CONTACT US</a></li>
-              <li><a href="blog.html">BLOG</a></li>
-            </ul>
-      </div>
-      <div class="nav_2">
-        <input type="search" name="" id="" placeholder="Search" />
-      </div>
+  <nav class="navbar">
+  <div class="nav_main">
+    <button id="toggle-menu" aria-label="Toggle Menu">☰</button>
+    
+    <!-- Menu links -->
+    <ul id="navbar-menu">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="about.html">ABOUT US</a></li>
+      <li><a href="#">RESEARCH AND ACADEMIA</a></li>
+      <li><a href="services.html">OUR SERVICES</a></li>
+      <li><a href="#">WORK SAMPLES</a></li>
+      <li><a href="contact.html">CONTACT US</a></li>
+      <li><a href="blog.html">BLOG</a></li>
+    </ul>
+    
+    <!-- Search bar -->
+    <div class="nav_2">
+      <input type="search" name="" id="search-input" placeholder="Search" />
     </div>
   </div>
+</nav>
+
 
 
   <div id="whatsapp">
@@ -552,7 +558,7 @@ button:hover {
         <div class="Footer_col1">
           <h2 style="color: white;">Have a Questions?
           </h2>
-          <p> <i class="fa-solid fa-location-dot"></i>
+          <p> <i class="fa-solid fa-location-dot"></i>Alpha 1 Commercial Belt, Greater Noida, U.P, India
           </p>
           <p> <i class="fa-solid fa-phone"></i>+91 8585915496</p>
           <p><i class="fa-solid fa-envelope"></i>info.jurisstudy@gmail.com</p>
@@ -661,10 +667,21 @@ form.onsubmit = function(event) {
     </script>
 
 <script>
-  document.getElementById('toggle-menu').addEventListener('click', function() {
-      const nav = document.querySelector('.nav_1');
-      nav.classList.toggle('active');
-  });
+document.getElementById("toggle-menu").addEventListener("click", function() {
+  const navbarMenu = document.getElementById("navbar-menu");
+  const toggleButton = document.getElementById("toggle-menu");
+
+  // Toggle the active class for menu visibility
+  navbarMenu.classList.toggle("active");
+
+  // Change the button text between ☰ (menu) and ✖ (close)
+  if (navbarMenu.classList.contains("active")) {
+    toggleButton.textContent = "✖"; // Change to close icon
+  } else {
+    toggleButton.textContent = "☰"; // Change back to menu icon
+  }
+});
+
 </script>
 
 <script>
