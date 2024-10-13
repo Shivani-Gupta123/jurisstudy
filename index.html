@@ -242,10 +242,12 @@ button:hover {
 }
 
 .Home{
-    height:550px;
+    /* height:550px; */
     background-image: url(./images/ARE_YOU_LOOKING_FOR_LEGAL_R[1].png);
-    /* background-position: center;
-    background-size: contain; */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
 }
 
 
@@ -284,6 +286,14 @@ button:hover {
   background: linear-gradient(0deg, rgba(6,21,117,1) 0%, rgba(255,255,255,1) 100%);
   padding: 3rem 1rem;
   color: #fff;
+}
+
+.Hero_col2 p{
+  text-align: justify;
+}
+
+.Hero_col1 p{
+  text-align: justify;
 }
 
 .navbar {
@@ -413,7 +423,7 @@ button:hover {
   width: 100%;
   background-image: url(images/what\ we\ offer\ backgound\ image[1].png);
   background-position: center;
-  background-size: fill;
+  background-size: contain;
 }
 .offer_main {
   display: flex;
@@ -433,12 +443,13 @@ button:hover {
   padding: 2rem 2rem;
 }
 .offer_col {
-  padding: 2rem 0;
+  padding: 2rem 2;
   display: flex;
   align-items: center;
 }
 .offer_col_2 {
   padding: 0 1rem;
+  align-items: justify;
 }
 .offer_col_2 h3 {
   font-weight: 500;
@@ -505,7 +516,48 @@ button:hover {
 .main-p{
     text-align:center; 
 }
-@media(min-width:1024px){
+
+@media (max-width: 768px) {
+  .offer_main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .offer_mid_col {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .offer_col {
+    flex-direction: column; /* Stack icons and content vertically */
+    align-items: center;
+    text-align: center;
+    flex-basis: 100%; /* Full width on mobile */
+  }
+
+  .offer_col_1 img {
+    margin-bottom: 10px; /* Space between icon and content */
+    max-width: 80px; /* Adjust the size of icons for mobile */
+  }
+
+  .offer_col_2 {
+    text-align: justify; /* Center the content */
+  }
+
+  .offer_col h3, .offer_col p {
+    text-align: center;
+  }
+
+  .offers h1 {
+    font-size: 2rem;
+  }
+
+  .offers p.offer_p {
+    font-size: 1rem;
+  }
+}
+
+/* @media(min-width:1024px){
   .offer_2{
     margin-top: 290px;
   }
@@ -517,20 +569,20 @@ button:hover {
   .offers h1{
      text-align: center;
   }
-}
-@media(min-width:1024px){
+} */
+/* @media(min-width:1024px){
   .offer_2{
     margin-top: 290px;
   }
   .offers{
     width: 100%;
     text-align: center;
-    /* margin-left: 140px; */
+  
   }
   .offers h1{
      text-align: center;
   }
-}
+} */
 
 /* Responsive Design */
 @media (min-width: 768px) {
@@ -541,14 +593,7 @@ button:hover {
     }
 }
 
-@media (max-width: 347px){
-      .offer_mid_col{
-         display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  /* padding: 1rem 0; */
-  width:100%;
-    }
-}
+
 
 #subscribeMessage {
     margin-top: 10px;
@@ -617,7 +662,7 @@ button:hover {
       <li><a href="about.html">ABOUT US</a></li>
       <li><a href="#">RESEARCH AND ACADEMIA</a></li>
       <li><a href="services.html">OUR SERVICES</a></li>
-      <li><a href="#">WORK SAMPLES</a></li>
+      <li><a href="worksample.html">WORK SAMPLES</a></li>
       <li><a href="blog.html">BLOG</a></li>
       <li><a href="contact.html">CONTACT US</a></li>
     </ul>
@@ -725,9 +770,9 @@ button:hover {
           <!-- ****************************************** -->
           <div class="offer_col">
             <div class="offer_col_1">
-              <img src="./images/Icon1.png" alt="" />
+              <img style="padding-top: 10px;"  src="./images/Icon1-removebg-preview.png" alt="" />
             </div>
-            <div class="offer_col_2">
+            <div style="margin-top: -20px;" class="offer_col_2">
               <h3 style="text-align: left;">Innovative Learning Space
               </h3>
               <p>
@@ -737,7 +782,7 @@ button:hover {
           </div>
           <div class="offer_col">
             <div class="offer_col_1">
-              <img src="./images/Icon2.png" alt="" />
+              <img src="./images/Icon2-removebg-preview.png" alt="" />
             </div>
             <div class="offer_col_2">
               <h3 style="text-align: left;">Internship Opportunities</h3>
@@ -751,7 +796,7 @@ button:hover {
 
           <div class="offer_col">
             <div class="offer_col_1">
-              <img src="./images/Icon2.png" alt="" />
+              <img src="./images/Icon3-removebg-preview.png" alt="" />
             </div>
             <div class="offer_col_2">
               <h3 style="text-align: left;">Customized Research Programs</h3>
@@ -766,7 +811,7 @@ button:hover {
      
           <div class="offer_col">
             <div class="offer_col_1">
-              <img src="./images/Icon4.png" alt="" />
+              <img src="./images/Icon4-removebg-preview.png" alt="" />
             </div>
             <div class="offer_col_2">
               <h3 style="text-align: left;">Enriching Legal Research Opportunities</h3>
@@ -779,7 +824,7 @@ button:hover {
           <!-- ****************************************** -->
           <div class="offer_col">
             <div class="offer_col_1">
-              <img src="./images/Icon5.png" alt="" />
+              <img src="./images/Icon5-removebg-preview.png" alt="" />
             </div>
             <div class="offer_col_2">
               <h3 style="text-align: left;">Legal Research Guide/Tutorial
@@ -793,7 +838,7 @@ button:hover {
           </div>
           <div class="offer_col">
             <div class="offer_col_1">
-              <img src="./images/Icon6.png" alt="" />
+              <img src="./images/Icon6-removebg-preview.png" alt="" />
             </div>
             <div class="offer_col_2">
               <h3 style="text-align: left;">Free-Counselling Sessions
@@ -829,16 +874,14 @@ Our law tech experts help you throughout the journey of law school and help you 
           <p style="  text-align: justify;">
            We are a team of experienced legal researchers, who help students, professionals, and scholars build their academic portfolios stronger.
 
-<p style="text-indent: 50px; margin-top: -16px;   text-align: justify;">As we all can easily find a major gap in our educational system, which binds an individual to theoretical concepts and does not allow them to gain practical insights and knowledge, we ensure to offer customized legal research support to every person, who has a dream to upscale their careers in academic field.</p>
+<p style=" margin-top: -16px;   text-align: justify;">As we all can easily find a major gap in our educational system, which binds an individual to theoretical concepts and does not allow them to gain practical insights and knowledge, we ensure to offer customized legal research support to every person, who has a dream to upscale their careers in academic field.</p>
 
           </p>
-          <p style=" text-align: justify;">
+          <p style=" text-align: justify; margin-top: -10px;">
             If you are also curious, about knowing the ways to write a top-notch legal research paper, with all citations and references in place, prepare a well-planned dissertation, craft a compelling thesis, or align your moot court memorial, we will offer you, personalized support at every step from, planning to execution.
           </p>
-          <p  style="text-indent: 50px; margin-top: -16px;  text-align: justify;">Let's connect to prepare a smooth platform for your legal research journey, stand out with high-tech skills and abilities, and be future industrial leaders.</p>
-          <a href="https://wa.me/918585915496?text=Hello, I would like to connect." target="_blank">
-            <button>Send Us Your Requirement</button>
-          </a>
+          <p  style=" margin-top: -16px;  text-align: justify;">Let's connect to prepare a smooth platform for your legal research journey, stand out with high-tech skills and abilities, and be future industrial leaders.</p>
+        
         </div>
       </div>
       <div>
@@ -957,6 +1000,9 @@ Get a well-customized moot court memorial and shine at the top of your law schoo
         </p>
         <!-- <button class="btn2">Apply Now</button> -->
       </div>
+      <a href="https://wa.me/918585915496?text=Hello, I would like to connect." target="_blank">
+        <button>Send Us Your Requirement</button>
+      </a>
       <!-- ***************************** -->
     </div>
   </div>
@@ -1063,7 +1109,7 @@ Get a well-customized moot court memorial and shine at the top of your law schoo
       </div>
     </div> -->
     <!-- ****************************************** -->
-    <div style="margin-top: -150px;" class="Blog">
+    <div style="margin-top: -100px;" class="Blog">
       <h1 class="main-h2">Our Blogs</h1>
       <p class="main-p">
         Read our enriching blogs on legal research gaps, challenges, and future scope in the contemporary world.
