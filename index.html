@@ -242,21 +242,21 @@ button:hover {
 }
 
 .Home{
-    /* height:550px; */
-    background-image: url(./images/ARE_YOU_LOOKING_FOR_LEGAL_R[1].png);
-    background-position: center;
-    background-size: cover;
+   background-image: url(./images/ARE_YOU_LOOKING_FOR_LEGAL_R[1].png);
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
+    background-size: cover;
+    background-position: center;
+    /* background-blend-mode: color; */
+    /* background-color: rgb(0, 0, 0, 0.6); */
 }
 
 
 
-@media (max-width: 568px) {
-  .Home {
-    background-size: cover; /* Cover entire width on smaller screens */
-    background-position: center top; /* Adjust position for better alignment */
-  }
+
+@media only screen and (min-width: 320px) and (max-width: 576px) {
+    .Home {
+        height: auto;
+    }
 }
 
 .Home_main h1, h3{
@@ -351,7 +351,7 @@ button:hover {
     flex-direction: column;
     position: absolute;
     bottom: -270px;
-    left: 0;
+    left: -50px;
     width: 100%;
     background-color: #0d1128;
     z-index: 1000;
@@ -544,6 +544,10 @@ button:hover {
     text-align: justify; /* Center the content */
   }
 
+  .offer_col_1 {
+    text-align: justify;
+  }
+
   .offer_col h3, .offer_col p {
     text-align: center;
   }
@@ -591,8 +595,50 @@ button:hover {
         justify-content: center;
         gap: 40px;
     }
+
+
 }
 
+/* Style the button */
+.btn {
+    background-color: #fd5f00;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: -5px auto;
+    display: block;
+}
+
+/* Center the button in the container */
+.Courses {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Button hover effect */
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .btn {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+}
 
 
 #subscribeMessage {
@@ -677,9 +723,7 @@ button:hover {
   <div id="whatsapp">
     <a href="https://wa.me/918585915496?text=Hello, I would like to connect."><div id="whatsappMain"></div></a>
 </div>
-<div class="fixed-phone-icon">
-    <a href="tel:+918585915496"><div id="phoneicon"></div></a>
-</div>
+
   <!-- ****************************************** -->
 
   <div id="form-modal" class="modal">
@@ -705,14 +749,16 @@ button:hover {
 </div>
 
   <div class="Home">
+   
     <div class="Home_main">
+      
       <h1>Are you looking for legal research</h1>
       <h1>professional support?</h1>
       <h3>Hire us to, flexibly manage your projects and ensure quality results.</h3>
       <p>
       We help students, professionals, and scholars lead successful careers in different <br> areas of legal research and analysis, ensuring productivity and systematic workflows.
       </p>
-      <a href="https://wa.me/918585915496?text=Hello, I would like to connect." target="_blank">
+      <a href="mailto:info.jurisstudy@gmail.com?subject=Subject&body=Message" target="_blank">
         <button>Explore More</button>
       </a>
       
@@ -840,7 +886,7 @@ button:hover {
             <div class="offer_col_1">
               <img src="./images/Icon6-removebg-preview.png" alt="" />
             </div>
-            <div class="offer_col_2">
+            <div style="margin-top: 15px;" class="offer_col_2">
               <h3 style="text-align: left;">Free-Counselling Sessions
               </h3>
               <p>
@@ -1000,11 +1046,11 @@ Get a well-customized moot court memorial and shine at the top of your law schoo
         </p>
         <!-- <button class="btn2">Apply Now</button> -->
       </div>
-      <a href="https://wa.me/918585915496?text=Hello, I would like to connect." target="_blank">
-        <button>Send Us Your Requirement</button>
-      </a>
       <!-- ***************************** -->
     </div>
+    <a href="mailto:info.jurisstudy@gmail.com?subject=Subject&body=Message" target="_blank">
+      <button class="btn">Send Us Your Requirement</button>
+    </a>
   </div>
   <!-- ****************************************** -->
   <div class="Teachers">
@@ -1169,28 +1215,28 @@ Get a well-customized moot court memorial and shine at the top of your law schoo
     </div>
     <!-- ****************************************** -->
     <section class="testimonials">
-      <h2>Our Clients</h2>
+      <h2 style="margin-top: -30px;">Our Clients</h2>
       <div class="testimonial-container">
           <div class="testimonial">
             <div class="Testimonial_Mid1">
               <img src="./images/teacher-10.jpg" alt="">
             </div>
               <p>"The insights provided in the blogs have transformed my understanding of legal research. Highly recommended!"</p>
-              <h4>- Jane Doe, Law Student</h4>
+              <h4>- Harshita, Law Student</h4>
           </div>
           <div class="testimonial">
             <div class="Testimonial_Mid1">
               <img src="./images/teacher-30.jpg" alt="">
             </div>
               <p>"An invaluable resource for anyone interested in the future of legal education and research. A must-read!"</p>
-              <h4>- John Smith, Legal Practitioner</h4>
+              <h4>- Varsha, Legal Practitioner</h4>
           </div>
           <div class="testimonial">
             <div class="Testimonial_Mid1">
               <img src="./images/teacher-10.jpg" alt="">
             </div>
               <p>"These blogs not only highlight the gaps in legal research but also offer actionable solutions. Truly enlightening!"</p>
-              <h4>- Emily Johnson, Legal Educator</h4>
+              <h4>- Anjali, Legal Educator</h4>
           </div>
       </div>
   </section>
