@@ -434,7 +434,7 @@ button:hover {
   width: 100%;
   background-image: url(images/what_we_offer_backgound_image.png);
   background-position: center;
-  background-size: cover;
+  background-size:cover;
 }
 .offer_main {
   display: flex;
@@ -610,10 +610,13 @@ button:hover {
         justify-content: center;
         gap: 40px;
     }
-
-
 }
 
+@media (min-width: 968px) {
+  .offer{
+    height: 950px;
+  }
+}
 /* Style the button */
 .btn {
     background-color: #fd5f00;
@@ -842,7 +845,7 @@ button:hover {
             <div style="margin-top: -20px;" class="offer_col_2">
               <h3 >Innovative Learning Space
               </h3>
-              <p>
+              <p  style="text-align: justify;">
                 Our first duty is to provide you with a healthy environment to learn grow and fully manifest your legal talent and access fantastic future opportunities.
               </p>
             </div>
