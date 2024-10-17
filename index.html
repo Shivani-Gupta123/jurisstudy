@@ -185,13 +185,53 @@ input, textarea {
 }
 
 /* Submit Button */
-button {
+/* button {
     padding: 10px 20px;
     background-color: #fd5f00;
     color: #fff;
     border: none;
     cursor: pointer;
     border-radius: 5px;
+} */
+
+  button {
+    background-color: #fd5f00;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid transparent; 
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    margin: -5px auto;
+    display: block;
+    position: relative;
+    animation: moveBorder 3s infinite linear; /* Moving border animation */
+}
+
+/* Pop-up effect on hover */
+.btn:hover {
+    background-color: #fd5f00; /* Existing hover effect */
+    transform: scale(1.1); /* Slightly enlarge the button */
+    box-shadow: none; /* Remove shadow during hover */
+    border-color: transparent; /* Ensure the border remains hidden */
+    animation: none; /* Stop the moving border animation on hover */
+}
+
+/* Keyframes for moving border effect */
+@keyframes moveBorder {
+    0% {
+        border-color: transparent;
+        box-shadow: 0 0 0 0px #2a1d14;
+    }
+    50% {
+        border-color: #181717;
+        box-shadow: 0 0 10px 5px #231c18;
+    }
+    100% {
+        border-color: transparent;
+        box-shadow: 0 0 0 0px #181310;
+    }
 }
 
 button:hover {
@@ -618,7 +658,7 @@ button:hover {
   }
 }
 /* Style the button */
-.btn {
+/* .btn {
     background-color: #fd5f00;
     color: white;
     padding: 10px 30px;
@@ -629,6 +669,47 @@ button:hover {
     transition: background-color 0.3s ease;
     margin: -5px auto;
     display: block;
+   
+} */
+
+.btn {
+    background-color: #fd5f00;
+    color: white;
+    padding: 10px 30px;
+    border: 2px solid transparent; 
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    margin: -5px auto;
+    display: block;
+    position: relative;
+    animation: moveBorder 3s infinite linear; /* Moving border animation */
+}
+
+/* Pop-up effect on hover */
+.btn:hover {
+    background-color: #fd5f00; /* Existing hover effect */
+    transform: scale(1.1); /* Slightly enlarge the button */
+    box-shadow: none; /* Remove shadow during hover */
+    border-color: transparent; /* Ensure the border remains hidden */
+    animation: none; /* Stop the moving border animation on hover */
+}
+
+/* Keyframes for moving border effect */
+@keyframes moveBorder {
+    0% {
+        border-color: transparent;
+        box-shadow: 0 0 0 0px #fd5f00;
+    }
+    50% {
+        border-color: #fd5f00;
+        box-shadow: 0 0 10px 5px #fd5f00;
+    }
+    100% {
+        border-color: transparent;
+        box-shadow: 0 0 0 0px #fd5f00;
+    }
 }
 
 /* Center the button in the container */
@@ -640,7 +721,7 @@ button:hover {
 
 /* Button hover effect */
 .btn:hover {
-    background-color: #0056b3;
+    background-color: #162beb;
 }
 
 /* Responsive styling */
@@ -701,7 +782,7 @@ button:hover {
           </div>
           <div class="header_email">
             <h5>Email</h5>
-            <a href="mailto:info.jurisstudy@gmail.com"><p>info.jurisstudy@gmail.com</p></a>
+            <a href="mailto:info.jurisstudy@gmail.com?subject=Requirements&body=Hi%20team%20JurisStudy,%0A%0AI%20have%20the%20following%20requirements:"><p>info.jurisstudy@gmail.com</p></a>
 
           </div>
         </div>
@@ -782,7 +863,7 @@ button:hover {
       <p>
       We help students, professionals, and scholars lead successful careers in different <br> areas of legal research and analysis, ensuring productivity and systematic workflows.
       </p>
-      <a href="mailto:info.jurisstudy@gmail.com?subject=Subject&body=Message" target="_blank">
+      <a href="mailto:info.jurisstudy@gmail.com?subject=Requirements&body=Hi%20team%20JurisStudy,%0A%0AI%20have%20the%20following%20requirements:" target="_blank">
         <button>Explore More</button>
       </a>
       
@@ -1071,7 +1152,7 @@ Get a well-customized moot court memorial and shine at the top of your law schoo
       </div>
       <!-- ***************************** -->
     </div>
-    <a href="mailto:info.jurisstudy@gmail.com?subject=Subject&body=Message" target="_blank">
+    <a href="mailto:info.jurisstudy@gmail.com?subject=Requirements&body=Hi%20team%20JurisStudy,%0A%0AI%20have%20the%20following%20requirements:" target="_blank">
       <button class="btn">Send Us Your Requirement</button>
     </a>
   </div>
@@ -1275,7 +1356,7 @@ Get a well-customized moot court memorial and shine at the top of your law schoo
           <p> <i class="fa-solid fa-location-dot"></i>Alpha 1  Commercial Belt, Greater Noida, U.P, India 201310
           </p>
           <p> <i class="fa-solid fa-phone"></i>+91 8585915496</p>
-          <p><i class="fa-solid fa-envelope"></i><a href="mailto:info.jurisstudy@gmail.com">info.jurisstudy@gmail.com</a>
+          <p><i class="fa-solid fa-envelope"></i><a href="mailto:info.jurisstudy@gmail.com?subject=Requirements&body=Hi%20team%20JurisStudy,%0A%0AI%20have%20the%20following%20requirements:">info.jurisstudy@gmail.com</a>
 </p>
         </div>
         <!-- ************************* -->
