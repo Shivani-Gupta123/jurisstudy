@@ -341,53 +341,13 @@ ul {
   font-size: 1rem;
   color: #fff;
 }
-/* .Home_main button {
+.Home_main button {
   
   font-size: 1rem;
   color: #fff;
   background-color: var(--primary-color);
   border-radius: 40px;
   border: 0;
-} */
-
-.Hero_main button {
-  background-color: #fd5f00;
-  color: white;
-  padding: 10px 30px;
-  border: 2px solid transparent; 
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease; /* Smooth transition for all properties */
-  margin: -5px auto;
-  display: block;
-  position: relative;
-  animation: moveBorder 3s infinite linear; /* Moving border animation */
-}
-
-/* Pop-up effect on hover */
-.btn:hover {
-  background-color: #fd5f00; /* Existing hover effect */
-  transform: scale(1.1); /* Slightly enlarge the button */
-  box-shadow: none; /* Remove shadow during hover */
-  border-color: transparent; /* Ensure the border remains hidden */
-  animation: none; /* Stop the moving border animation on hover */
-}
-
-/* Keyframes for moving border effect */
-@keyframes moveBorder {
-  0% {
-      border-color: transparent;
-      box-shadow: 0 0 0 0px #fd5f00;
-  }
-  50% {
-      border-color: #fd5f00;
-      box-shadow: 0 0 10px 5px #fd5f00;
-  }
-  100% {
-      border-color: transparent;
-      box-shadow: 0 0 0 0px #fd5f00;
-  }
 }
 .Home_main button:hover,
 .btn2:hover {
@@ -882,7 +842,7 @@ ul {
   padding: 0.8rem;
   margin: 0.8rem 0 3rem 0;
   font-size: 1.1rem;
-  background: #5d50c6;
+  background: #e7691b;
   border: 0;
   color: #fff;
 }
