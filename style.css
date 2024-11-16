@@ -255,7 +255,7 @@ ul {
     display: none;
     flex-direction: column;
     position: absolute;
-    bottom: -270px;
+    top: 400px;
     left: 0;
     width: 100%;
     background-color: #0d1128;
