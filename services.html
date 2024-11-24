@@ -15,9 +15,12 @@
     
     <style>
     
-    /* General navbar styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-      /* Container for the contact buttons */
 .contact-buttons {
     position: fixed;
     top: 50%;
@@ -416,6 +419,108 @@ button:hover {
 /*  width: 35%;*/
 /*}*/
 
+.container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      color: #060606; /* Matches green theme */
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+
+    .section {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .section img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 8px;
+    }
+
+    .content {
+      flex: 1;
+      min-width: 300px;
+      text-align: justify;
+    }
+
+    .content h2 {
+      margin-top: 0;
+    }
+
+    .content p {
+      margin: 10px 0;
+      line-height: 1.6;
+      color: #060606;
+      text-align: justify;
+    }
+
+    .button {
+      display: inline-block;
+      margin: 20px;
+      padding: 10px 20px;
+      color: #fcfbfb;
+      background: #f06807;
+      border: none;
+      border-radius: 5px;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+
+    }
+
+    .button:hover {
+      background: #f06807;
+    }
+
+    /* Responsive Layout */
+    @media screen and (max-width: 768px) {
+      .container {
+        padding: 10px;
+      }
+
+      h1, h2 {
+        font-size: 1.5rem;
+      }
+
+      .section {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+
+    .hidden-content {
+      display: none;
+      overflow: hidden;
+    }
+
+    .read-more {
+      color: #dd5a18;
+      font-weight: bold;
+      cursor: pointer;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .read-more:hover {
+      text-decoration: underline;
+    }
+
 .offer {
   width: 100%;
   background-image: url(images/what\ we\ offer\ backgound\ image[1].png);
@@ -668,99 +773,124 @@ button:hover {
 
 
 
-  <div style="margin-top: -40px;" class="Courses">
-    <h1 class="main-h2">Our Services</h1>
-    <p class="main-p">
-      What sets us apart in the legal research industry is our unique talent, to collaborate with top-notch law universities and leading personalities in the concerned field.
-    </p>
-    <p class="main-p">We have clients from all across the world with a high reputation and standards in the legal society.</p>
-    <!-- ***************************** -->
-    <div class="Courses_main">
-      <!-- ***************************** -->
-      <div class="Courses_col1">
-        <img src="./images/course-1.jpg" alt="" />
-        <!-- <div class="Course_mid">
-          <div class="Course_mid1">
-            <h5><i class="fa-solid fa-user"></i> MR KHAN</h5>
-          </div>
-          <div class="Course_mid1">
-            <h5><i class="fa-solid fa-table-cells"></i> 10 SEATS</h5>
-          </div>
-          <div class="Course_mid1">
-            <h5><i class="fa-regular fa-calendar-days"></i> 4 YEARS</h5>
-          </div>
-        </div> -->
-        <h2>Writing Academic Research Papers</h2>
-        <p>
-          With profound experience in legal research and writing, our experts are well-versed in preparing high-profile research papers on any legal subject matter, based on the client’s needs.
-        </p>
-        <!-- <button class="btn2">Apply Now</button> -->
-      </div>
-      <!-- ***************************** -->
-      <div class="Courses_col1">
-        <img src="./images/course-2.jpg" alt="" />
-        <!-- <div class="Course_mid">
-          <div class="Course_mid1">
-            <h5><i class="fa-solid fa-user"></i> MR KHAN</h5>
-          </div>
-          <div class="Course_mid1">
-            <h5><i class="fa-solid fa-table-cells"></i> 10 SEATS</h5>
-          </div>
-          <div class="Course_mid1">
-            <h5><i class="fa-regular fa-calendar-days"></i> 4 YEARS</h5>
-          </div>
-        </div> -->
-        <h2>Preparing Dissertations</h2>
-        <p>
-          We have an advanced approach to completing your long dissertation projects, effectively based on your unique needs and preferences, and make your law journey much smoother.
-        </p>
-        <!-- <button class="btn2">Apply Now</button> -->
-      </div>
-      <!-- ***************************** -->
-      <div class="Courses_col1">
-        <img src="./images/course-3.jpg" alt="" />
-        <!-- <div class="Course_mid">
-          <div class="Course_mid1">
-            <h5><i class="fa-solid fa-user"></i> MR KHAN</h5>
-          </div>
-          <div class="Course_mid1">
-            <h5><i class="fa-solid fa-table-cells"></i> 10 SEATS</h5>
-          </div>
-          <div class="Course_mid1">
-            <h5><i class="fa-regular fa-calendar-days"></i> 4 YEARS</h5>
-          </div>
-        </div> -->
-        <h2>Crafting Compelling Thesis</h2>
-        <p>
-          Having a wide range of experience with multiple legal research scholars, our professionals are experts in designing the most compelling thesis to help you stand out with a unique academic piece.
-        </p>
-        <!-- <button class="btn2">Apply Now</button> -->
-      </div>
-      <!-- ***************************** -->
-      <div class="Courses_col1">
-        <img src="./images/course-4.jpg" alt="" />
-        <!-- <div class="Course_mid">
-          <div class="Course_mid1">
-            <h5><i class="fa-solid fa-user"></i> MR KHAN</h5>
-          </div>
-          <div class="Course_mid1">
-            <h5><i class="fa-solid fa-table-cells"></i> 10 SEATS</h5>
-          </div>
-          <div class="Course_mid1">
-            <h5><i class="fa-regular fa-calendar-days"></i> 4 YEARS</h5>
-          </div>
-        </div> -->
-        <h2>Designing Interactive Moot Court Memorials</h2>
-        <p>
-          Our legal experts have, extensive, experience in training moot court practitioners and adjudging the chair.
-Get a well-customized moot court memorial and shine at the top of your law school.
+<div class="container">
+  <h1>Our Services</h1>
+  <p style="color: #000; text-align: justify; margin-bottom: 30px;">Our unwavering commitment to excellence in the legal research industry is deeply rooted in our distinctive approach to collaboration, innovation, and continuous improvement.
 
+    At the heart of our success is a philosophy of partnership—working side-by-side with some of the most esteemed law universities and highly respected legal professionals from around the world.
+    
+    This collaborative model allows us to bring unparalleled insight, extensive expertise, and cutting-edge knowledge directly to our clients, creating a service experience that is truly second to none.
+    </p>
+
+  <div class="section">
+    <img style="height: 200px;" src="https://i0.wp.com/www.interhacktives.com/wp-content/uploads/2023/03/academicresearch.png?fit=1920%2C1080&ssl=1" alt="Academic Research">
+    <div class="content">
+      <h2>1. Writing Academic Research Papers</h2>
+      <p>
+        <strong>Broad Expertise Across Legal Disciplines:</strong> 
+        Our team comprises specialists in various fields of law, each bringing a deep understanding of their respective areas. This diversity allows us to cover a comprehensive range of topics, from constitutional law, environmental law, and intellectual property to criminal justice and corporate law.Each research paper is tailored to the client’s specific needs, ensuring it resonates with relevance and depth.
+      </p>
+      <span class="read-more" onclick="toggleContent()">Read More</span>
+      <div class="hidden-content" id="extra-content">
+
+        <p>
+          <strong>Systematic Research Methodology:</strong> We follow a meticulous research process to ensure each paper reflects thorough scholarship. This approach includes:
         </p>
-        <!-- <button class="btn2">Apply Now</button> -->
+        <ul>
+          <li>Initial scoping and topic refinement: Our experts work with clients to define and narrow down the research focus, aligning the paper’s objectives with the client's academic or professional goals.</li>
+          <li>In-depth literature review: We explore credible sources from legal journals, case law, and reputable legal publications, providing a foundation that is both current and grounded in established knowledge.</li>
+          <li>Critical analysis and interpretation: Beyond summarizing information, we provide critical interpretations and analyses, positioning your work as an original contribution to the field.</li>
+        </ul>
+        <p>
+          <strong>Quality Assurance and Professional Presentation:</strong> To deliver a final product that meets rigorous academic standards, we apply a robust quality assurance process:
+        </p>
+        <ul>
+          <li>Editing and Proofreading: Our editors refine the language, improve readability, and ensure the paper adheres to academic writing conventions.</li>
+          <li>Citation Accuracy: We meticulously follow the requested citation style, whether it’s APA, MLA, Bluebook, or any other, ensuring each source is accurately referenced.</li>
+        </ul>
+        <p>
+          With our guidance, clients receive a well-structured, thoroughly researched, and polished research paper that stands out in any academic or professional setting.
+        </p>
       </div>
-      <!-- ***************************** -->
     </div>
   </div>
+
+
+  <div class="section">
+    <img style="height: 200px;" src="https://slidemodel.com/wp-content/uploads/0053-quick-guide-dissertation-writing-1200px.jpg" alt="Dissertation Support">
+    <div class="content">
+      <h2>2.Preparing Dissertations</h2>
+      <p><strong>Strategic Dissertation Planning:</strong>Completing a dissertation requires careful planning and execution, and we approach each project with a customized strategy:</p>
+      <ul>
+        <li>Project Roadmapping: We create a timeline that outlines the stages of dissertation development, from proposal to final draft, allowing clients to track their progress and stay on schedule.</li>
+        <li>Personalized Consultation: Every dissertation begins with an in-depth consultation, where our team understands the client’s academic goals, methodological preferences, and unique research questions.</li>
+      </ul>
+      <p><strong>Comprehensive Research and Analysis:</strong>A dissertation must offer novel insights, which is why we focus on rigorous research and analysis:</p>
+      <ul>
+        <li>Data Collection Methodology: Our team assists in selecting the appropriate methods for data collection, whether qualitative or quantitative. We offer support in designing surveys, conducting interviews, and gathering secondary data to strengthen your research findings.</li>
+        <li>Data Analysis and Interpretation: We provide advanced statistical and analytical support, translating raw data into insightful conclusions that contribute meaningfully to the field.</li>
+      </ul>
+      <p><strong>Continuous Feedback and Review Process</strong> We believe in a collaborative approach to dissertation development:</p>
+       <ul>
+        <li>Regular Feedback Loops: Clients receive ongoing feedback and recommendations, ensuring their dissertation evolves with clarity and purpose.</li>
+        <li>Draft Revisions and Refinements: Each chapter undergoes rigorous review and editing to align with the highest academic standards, allowing you to present a cohesive, well-structured dissertation that commands respect.
+        </li>
+       </ul>
+       <p>Our dissertation service supports you from start to finish, offering the expertise and resources needed to excel.</p>
+     
+    </div>
+  </div>
+
+  <div class="section">
+    <img style="height: 200px;" src="https://www.grammarflip.com/wp-content/uploads/2024/05/Crafting-Strong-Thesis-Statements-Empowering-Your-English-Language-Arts-Students.jpg" alt="Thesis Development">
+    <div class="content">
+      <h2>3.Crafting Compelling Theses</h2>
+      <p><strong>Customized Thesis Structuring and Development:</strong> Every thesis we create is uniquely tailored to reflect the student’s research goals and intellectual vision:</p>
+      <ul>
+        <li>Thesis Blueprint: We develop a customized blueprint that maps out each chapter, ensuring your arguments build upon each other logically and effectively.</li>
+        <li>Refinement of Research Questions: Our experts help you craft compelling research questions that drive your thesis, ensuring each question is purposeful and enhances the originality of your work.</li>
+      </ul>
+      <p><strong>Incorporation of Scholarly Perspectives:</strong> Our team brings an academic rigor that ensures your thesis is grounded in reputable scholarship:</p>
+      <ul>
+        <li>Literature Integration: We draw on the latest academic journals, legal precedents, and key texts to support each claim, framing your thesis within a scholarly context that adds weight to your arguments.</li>
+        <li>Critical Analysis and Synthesis: Beyond merely summarizing sources, we engage in a deep synthesis of ideas, helping your thesis make a substantial contribution to legal scholarship.</li>
+      </ul>
+      <p><strong>Final Presentation and Quality Standards</strong>A thesis is not only about content but also presentation:</p>
+      <ul>
+        <li>Formatting and Style Consistency: We adhere to specific formatting guidelines, paying close attention to detail to ensure visual consistency across the document.</li>
+        <li>Proofreading for Precision: Our editing team reviews each word to ensure grammatical accuracy, coherence, and adherence to your institution’s guidelines, resulting in a thesis that reflects professionalism and scholarly excellence.</li>
+      </ul>
+      <p>With a well-crafted thesis from our team, you’ll be prepared to make a lasting impression in academia.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <img style="height: 200px;" src="https://www.lawordo.com/wp-content/uploads/2018/10/Screen-Shot-2018-10-27-at-7.11.33-PM-e1540648320609.png" alt="Moot Court">
+    <div class="content">
+      <h2>4.Designing Interactive Moot Court Memorials</h2>
+      <p><strong>Personalized Memorial Development:</strong>Moot court competitions require documents that are both legally sound and tailored to the competition’s specific rules. Our memorial services include:</p>
+      <ul>
+        <li>Rule-Specific Customization: We ensure that each memorial aligns with the unique rules and structure required by your moot court competition, including word limits, formatting, and specific argument structures.</li>
+        <li>Client-Centered Approach: By understanding the goals of each team, we create memorials that reflect the client’s voice, ensuring a sense of authenticity and ownership.</li>
+      </ul>
+      <p><strong>Advanced Legal Research and Persuasive Argumentation</strong> A strong moot court memorial is founded on compelling arguments and thorough research:</p>
+      <ul>
+        <li>Primary and Secondary Source Integration: Our experts incorporate relevant statutes, case law, and scholarly sources, weaving them together into a cohesive narrative that supports your arguments.</li>
+        <li>Compelling Argumentation and Rebuttal Preparation: We draft persuasive arguments and anticipate possible counterpoints, preparing you to effectively rebut opposing positions and impress adjudicators.</li>
+      </ul>
+      <p><strong>Comprehensive Training and Mock Sessions</strong>In addition to memorial preparation, we offer valuable training resources to enhance your performance:</p>
+      <ul>
+        <li>Mock Court Simulation: We conduct mock court sessions where you can practice your oral arguments in a realistic setting, receiving feedback from seasoned professionals.</li>
+        <li>Feedback on Presentation Style and Advocacy Skills: Our experts provide constructive feedback on your presentation style, helping you gain confidence in your ability to deliver a polished, persuasive performance.</li>
+      </ul>
+      <p>Our moot court memorial and training services are designed to give you an edge, helping you excel in competitive settings and build a foundation for future legal advocacy.</p>
+    </div>
+  </div>
+
+  <!-- <div  style="text-align: center;">
+    <a href="contact.html" class="button">Contact Us for Assistance</a>
+  </div> -->
+</div>
   <!-- ****************************************** -->
 
   <!-- ****************************************** -->
@@ -940,10 +1070,22 @@ document.getElementById("toggle-menu").addEventListener("click", function() {
         });
     </script>
   
- 
-    <!-- ****************************************** -->
 
-    <!-- ****************************************** -->
+  <script>
+    function toggleContent() {
+      const content = document.getElementById('extra-content');
+      const readMore = document.querySelector('.read-more');
+
+      if (content.style.display === 'none' || content.style.display === '') {
+        content.style.display = 'block';
+        readMore.textContent = 'Read Less';
+      } else {
+        content.style.display = 'none';
+        readMore.textContent = 'Read More';
+      }
+    }
+  </script>
+
 </body>
 
 </html>
