@@ -248,44 +248,6 @@ button:hover {
     background-size: contain; */
 }
 
-
-
-@media (max-width: 568px) {
-  .Home {
-    background-size: cover; /* Cover entire width on smaller screens */
-    background-position: center top; /* Adjust position for better alignment */
-  }
-}
-
-.Home_main h1, h3{
-   text-align: center; 
-}
-
-.Home_main h3{
-    margin-top:20px;
-}
-
-.Home_main p{
-    padding:20px;
-    text-align:center;
-    justify-content: center;
-}
-
- .Home_main button{
-    margin:20px 0px 90px 520px;
-} 
-
-.Hero_col1 {
-  background: linear-gradient(0deg, rgba(253,146,45,1) 0%, rgba(242,242,242,1) 100%);
-  padding: 3rem 1rem;
-  color: #fff;
-}
-.Hero_col2 {
-  background: linear-gradient(0deg, rgba(6,21,117,1) 0%, rgba(255,255,255,1) 100%);
-  padding: 3rem 1rem;
-  color: #fff;
-}
-
 .navbar {
   background-color: #0d1128; 
   /*background: linear-gradient(0deg, rgba(6,38,104,1) 100%, rgba(255,255,255,1) 100%);*/
@@ -377,138 +339,223 @@ button:hover {
   .nav_2 input {
     width: 90%;
   }
+
+  .main-p p{
+    text-align: justify;
+    padding: 0 2rem;
+  }
 }
 
-/* General Styling */
-.work-sample {
-  padding: 2rem;
-  text-align: center;
-  background-color: #f9f9f9;
+@media (max-width: 568px) {
+  .Home {
+    background-size: cover; /* Cover entire width on smaller screens */
+    background-position: center top; /* Adjust position for better alignment */
+  }
+
+
 }
 
-.work-sample h1 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 1rem;
+.Home_main h1, h3{
+   text-align: center; 
 }
 
-.work-sample p {
-  font-size: 1.1rem;
-  color: #666;
-  margin-bottom: 2rem;
+.Home_main h3{
+    margin-top:20px;
 }
 
-.sample-category h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #444;
+.Home_main p{
+    padding:20px;
+    text-align:center;
+    justify-content: center;
 }
 
-.sample-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
+ .Home_main button{
+    margin:20px 0px 90px 520px;
+} 
 
-.sample-card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.sample-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-}
-
-.sample-card img {
-  width: 100%;
-  height: auto;
-}
-
-.sample-content {
-  padding: 1rem;
-}
-
-.sample-content h3 {
-  font-size: 1.2rem;
-  color: #222;
-  margin-bottom: 0.5rem;
-}
-
-.sample-content p {
-  font-size: 0.95rem;
-  color: #555;
-  margin-bottom: 1rem;
-}
-
-.view-btn {
-  display: inline-block;
-  padding: 0.6rem 1.2rem;
-  background-color: #007BFF;
+.Hero_col1 {
+  background: linear-gradient(0deg, rgba(253,146,45,1) 0%, rgba(242,242,242,1) 100%);
+  padding: 3rem 1rem;
   color: #fff;
-  border-radius: 4px;
-  text-decoration: none;
+}
+.Hero_col2 {
+  background: linear-gradient(0deg, rgba(6,21,117,1) 0%, rgba(255,255,255,1) 100%);
+  padding: 3rem 1rem;
+  color: #fff;
+}
+
+
+/*.offer {*/
+/*  width: 100%;*/
+/*  background-image: url(images/what\ we\ offer\ backgound\ image[1].png);*/
+/*  background-position: center;*/
+/*  background-size:cover;*/
+/*}*/
+/*.offer_main {*/
+/*  display: flex;*/
+/*   padding: 0 4rem; */
+/*}*/
+/*.offer h1 {*/
+/*  font-weight: 500;*/
+/*  padding: 1rem 0;*/
+/*}*/
+/* .offer_p {
+  padding-right: 5rem;
+} */
+/*.offer_1 {*/
+/*  width: 95%;*/
+/*  padding-top: 3rem;*/
+/*}*/
+/*.offer_mid_col {*/
+/*  display: grid;*/
+/*  grid-template-columns: repeat(3, 1fr);*/
+  /* padding: 1rem 0; */
+/*  width:100%;*/
+/*}*/
+/*.offer_2 {*/
+/*  width: 35%;*/
+/*}*/
+
+.offer {
+  width: 100%;
+  background-image: url(images/what\ we\ offer\ backgound\ image[1].png);
+  background-position: center;
+  background-size: fill;
+}
+.offer_main {
+  display: flex;
+  flex-wrap: wrap; /* Ensures elements wrap on smaller screens */
+}
+.offer h1 {
   font-weight: 500;
-  transition: background-color 0.3s ease;
+  padding: 1rem 0;
+}
+.offer_1 {
+  width: 100%; /* Make it full width on smaller devices */
+  padding-top: 3rem;
+}
+.offer_mid_col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns layout for larger screens */
+  padding: 2rem 2rem;
+}
+.offer_col {
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+}
+.offer_col_2 {
+  padding: 0 1rem;
+}
+.offer_col_2 h3 {
+  font-weight: 500;
+  padding: 0.5rem 0;
+}
+.offer_col_2 p {
+  padding-right: 4rem;
+  color: #000;
 }
 
-.view-btn:hover {
-  background-color: #0056b3;
-}
 
-/* Mobile Responsiveness */
+/* Mobile adjustments */
 @media (max-width: 768px) {
-  .work-sample h1 {
-    font-size: 1.8rem;
+  .offer_mid_col {
+    grid-template-columns: 2fr; /* Stack the columns vertically */
+  }
+  .offer_col_2 p {
+    padding-right: 0; /* Remove the padding on smaller screens */
+  }
+  .offer_1 {
+    padding-top: 1rem;
   }
 
-  .work-sample p {
+  .offer h1 {
+    font-size: 1.5rem; /* Adjust font size for better mobile view */
+    text-align: center;
+  }
+  .offer_col_2 h3 {
+    font-size: 1.2rem;
+  }
+  .offer_col_2 p {
     font-size: 1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .sample-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .sample-card {
-    margin-bottom: 1rem;
-  }
-
-  .sample-content h3 {
-    font-size: 1.1rem;
-  }
-
-  .sample-content p {
-    font-size: 0.9rem;
-  }
-
-  .view-btn {
-    padding: 0.5rem 1rem;
-  }
-}
-
-/* Tablet Responsiveness */
-@media (max-width: 1024px) {
-  .sample-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
-
-  .work-sample h1 {
-    font-size: 2rem;
   }
   
-  .sample-card {
-    margin-bottom: 1.5rem;
+  .offer{
+  width: 100%;
+  background-image: url(images/what\ we\ offer\ backgound\ image[1].png);
+  background-position: center;
+  background-size: cover;
+  }
+  
+  .Home_main button{
+      margin:20px 0px 90px 90px;
   }
 }
 
+.Blog_center p {
+   text-align:justify; 
+}
 
+.Teacher_Mid1 p {
+    text-align:justify; 
+    /*color: white;*/
+}
 
+.offer_col_2 p{
+    text-align:justify; 
+}
 
+.Courses_col1 p{
+    text-align:justify; 
+}
+
+.main-p{
+    text-align:center; 
+}
+@media(min-width:1024px){
+  .offer_2{
+    margin-top: 290px;
+  }
+  .offers{
+    width: 100%;
+    text-align: justify;
+     margin-left: 30px; 
+  }
+  .offers h1{
+     text-align: center;
+  }
+}
+@media(min-width:1024px){
+  .offer_2{
+    margin-top: 290px;
+  }
+  .offers{
+    width: 100%;
+    text-align: center;
+    /* margin-left: 140px; */
+  }
+  .offers h1{
+     text-align: center;
+  }
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .testimonial-container {
+        flex-direction: row;
+        justify-content: center;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 347px){
+      .offer_mid_col{
+         display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  /* padding: 1rem 0; */
+  width:100%;
+    }
+}
 
 #subscribeMessage {
     margin-top: 10px;
@@ -520,13 +567,120 @@ button:hover {
     display: none;
 }
 
-/*.Teachers{*/
-/*    background-color: #959798;*/
-/*}*/
+.services-page {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-/*.Teachers_main{*/
-/*     background-color: #959798;*/
-/*}*/
+/* Header Section */
+.services-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.services-header h1 {
+  font-size: 36px;
+  color: #0e0f0e;
+}
+
+.services-header p {
+  font-size: 18px;
+  color: #0a0a0a;
+  margin: 10px 0;
+}
+
+/* Service Card Styles */
+.services-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading and Text Styles */
+.service-card h2 {
+  font-size: 24px;
+  color: #0d0e0d;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 20px;
+  color: #fd5f00;
+  margin: 15px 0;
+}
+
+.service-card p {
+  font-size: 16px;
+  color: #070606;
+  margin-bottom: 10px;
+}
+
+.service-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service-card ul li {
+  font-size: 16px;
+  color: #060606;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.service-card ul li strong {
+  color: #0e0f0e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .services-header h1 {
+    font-size: 28px;
+  }
+
+  .services-header p {
+    font-size: 16px;
+  }
+
+  .service-card h2 {
+    font-size: 22px;
+  }
+
+  .service-card h3 {
+    font-size: 18px;
+  }
+
+  .service-card p, .service-card ul li {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-header h1 {
+    font-size: 24px;
+  }
+
+  .services-header p {
+    font-size: 14px;
+  }
+
+  .service-card {
+    padding: 15px;
+  }
+}
 
     </style>
 </head>
@@ -575,9 +729,9 @@ button:hover {
     <ul id="navbar-menu">
       <li><a href="index.html">HOME</a></li>
       <li><a href="about.html">ABOUT US</a></li>
-      <li><a href="#">RESEARCH AND ACADEMIA</a></li>
+      <li><a href="research_&_academia.html">RESEARCH AND ACADEMIA</a></li>
       <li><a href="services.html">OUR SERVICES</a></li>
-      <li><a href="worksample.html">WORK SAMPLES</a></li>
+      <li><a href="intellectualpieces.html">INTELLECTUAL PIECES</a></li>
       <li><a href="blog.html">BLOG</a></li>
       <li><a href="contact.html">CONTACT US</a></li>
     </ul>
@@ -619,47 +773,80 @@ button:hover {
     </div>
 </div>
 
-
-<section class="work-sample">
-  <h1>Our Work Samples</h1>
-  <p>Explore a collection of our legal research, articles, dissertations, and more.</p>
-  
-  <!-- Sample Categories -->
-  <div class="sample-category">
-    <h2>Research Papers</h2>
-    <div class="sample-grid">
-      <!-- Sample Card -->
-      <div class="sample-card">
-        <img style="height: 200px;" src="images/research 1.webp" alt="Research Paper 1">
-        <div class="sample-content">
-          <h3>Research Paper 1</h3>
-          <p>Short summary or abstract of the research paper...</p>
-          <a href="sample1.pdf" target="_blank" class="view-btn">View Sample</a>
-        </div>
-      </div>
-      <!-- Additional Sample Cards -->
-      <div class="sample-card">
-        <img style="height: 200px;" src="images/research.jpeg" alt="Research Paper 2">
-        <div class="sample-content">
-          <h3>Research Paper 2</h3>
-          <p>Short summary or abstract of the research paper...</p>
-          <a href="research.pdf" target="_blank" class="view-btn">View Sample</a>
-        </div>
-      </div>
+<section class="services-page">
+    <div class="services-header">
+      <h1>Our Services</h1>
+      <p style="text-align:center;">
+        Our unwavering commitment to excellence in the legal research industry is deeply rooted in our distinctive approach to collaboration, innovation, and continuous improvement.
+      </p>
+      <p style="text-align: center;">
+        At the heart of our success is a philosophy of partnership—working side-by-side with some of the most esteemed law universities and highly respected legal professionals from around the world.
+      </p>
     </div>
-  </div>
+  
+    <div class="services-content">
+      <!-- Service 1 -->
+      <!-- <div class="service-card">
+        <h2>1. Writing Academic Research Papers</h2>
+        <h3>Broad Expertise Across Legal Disciplines</h3>
+        <p>
+          Our team comprises specialists in various fields of law, allowing us to cover topics such as constitutional law, environmental law, intellectual property, and more. Each paper is tailored to the client’s specific needs.
+        </p>
+        <h3>Systematic Research Methodology</h3>
+        <p>We follow a meticulous research process to ensure each paper reflects thorough scholarship. This approach includes:
+        </p>
+        <ul>
+          <li><strong>Initial Scoping and Topic Refinement:</strong> Experts define the research focus aligned with academic goals.</li>
+          <li><strong>In-depth Literature Review:</strong> Use of credible sources for a solid foundation.</li>
+          <li><strong>Critical Analysis:</strong> Original contributions through detailed analysis and interpretation.</li>
+        </ul>
+      </div> -->
+  
+      <!-- Service 2 -->
+      <!-- <div class="service-card">
+        <h2>2. Preparing Dissertations</h2>
+        <h3>Strategic Dissertation Planning</h3>
+        <p>
+          From proposal to final draft, our customized strategies help clients complete their dissertations effectively, including project roadmapping and personalized consultations.
+        </p>
+        <h3>Comprehensive Research and Analysis</h3>
+        <ul>
+          <li><strong>Data Collection:</strong> Support with surveys, interviews, and secondary data.</li>
+          <li><strong>Data Analysis:</strong> Advanced statistical and analytical support to derive meaningful conclusions.</li>
+        </ul>
+        <h3>Continuous Feedback and Review</h3>
+        <p>
+          Regular feedback and draft refinements ensure a cohesive, well-structured dissertation that commands respect.
+        </p>
+      </div> -->
+  
+      <!-- Service 3 -->
+      <!-- <div class="service-card">
+        <h2>3. Crafting Compelling Thesis</h2>
+        <h3>Strategic Dissertation Planning</h3>
+        <p>
+          From proposal to final draft, our customized strategies help clients complete their dissertations effectively, including project roadmapping and personalized consultations.
+        </p>
+        <h3>Comprehensive Research and Analysis</h3>
+        <ul>
+          <li><strong>Data Collection:</strong> Support with surveys, interviews, and secondary data.</li>
+          <li><strong>Data Analysis:</strong> Advanced statistical and analytical support to derive meaningful conclusions.</li>
+        </ul>
+        <h3>Continuous Feedback and Review</h3>
+        <p>
+          Regular feedback and draft refinements ensure a cohesive, well-structured dissertation that commands respect.
+        </p>
+      </div>
+  </section> -->
+  
 
-  <!-- Repeat for other categories like Legal Articles, Case Studies -->
-</section>
 
-
-  <div class="Form">
 
     <div class="Footer">
       <div class="Footer_main">
         <!-- ************************* -->
         <div class="Footer_col1">
-          <h2>Have a Questions?
+          <h2 style="color: white;">Have a Questions?
           </h2>
           <p> <i class="fa-solid fa-location-dot"></i>Alpha 1  Commercial Belt, Greater Noida, U.P, India 201310
           </p>
@@ -695,33 +882,32 @@ button:hover {
         </div> -->
         <!-- ************************* -->
         <div class="Footer_col3">
-          <h2>Quick Links</h2>
+          <h2 style="color: white;">Quick Links</h2>
           <ul>
-            <li><i class="fa-solid fa-arrow-right"></i> <a href="index.html">Home</a></li>
-            <li><i class="fa-solid fa-arrow-right"></i> <a href="about.html">About Us</a></li>
-            <li><i class="fa-solid fa-arrow-right"></i> <a href="research.html">Research and Academia</a></li>
-            <li><i class="fa-solid fa-arrow-right"></i> <a href="services.html">Our Services</a></li>
-            <li><i class="fa-solid fa-arrow-right"></i> <a href="worksample.html">Work Samples</a></li>
-            <li><i class="fa-solid fa-arrow-right"></i> <a href="blog.html">Blog</a></li>
-             <li><i class="fa-solid fa-arrow-right"></i> <a href="contact.html">Contact Us</a></li>
+            <li><i style="color: white;" class="fa-solid fa-arrow-right"></i> <a href="index.html">Home</a></li>
+            <li><i style="color: white;" class="fa-solid fa-arrow-right"></i> <a href="about.html">About Us</a></li>
+            <li><i style="color: white;" class="fa-solid fa-arrow-right"></i> <a href="research_&_academia.html">Research and Academia</a></li>
+            <li><i style="color: white;" class="fa-solid fa-arrow-right"></i> <a href="services.html">Our Services</a></li>
+            <li><i style="color: white;" class="fa-solid fa-arrow-right"></i> <a href="intellectualpieces.html">INTELLECTUAL PIECES</a></li>
+            <li><i style="color: white;" class="fa-solid fa-arrow-right"></i> <a href="blog.html">Blog</a></li>
+             <li><i style="color: white;" class="fa-solid fa-arrow-right"></i> <a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
         <!-- ************************* -->
         <div class="Footer_col4">
-      <h2>Subscribe Us!</h2>
+      <h2 style="color: white;">Subscribe Us!</h2>
     <input type="email" id="emailInput" placeholder="Enter Your Email" required>
     <button id="subscribeBtn">Subscribe</button>
     <p id="subscribeMessage" class="hidden">Thank you for subscribing!</p>
-          <h2>Connect With Us </h2>
+          <h2 style="color: white;">Connect With Us </h2>
           <div class="social_icons">
             <a href="https://wa.me/918585915496"><i class="fa-brands fa-whatsapp"></i></a>
             <a href="https://www.linkedin.com/company/jurisstudy/"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.facebook.com/people/Jurisstudy/61566563361135/"><i class="fa-brands fa-facebook"></i></a>
             <a href="https://www.youtube.com/@jurisstudy"><i class="fa-brands fa-youtube"></i></a>
              <a href=https://x.com/infojurisstudy><i class="fa-brands fa-x-twitter"></i></a>
-             <a href="https://www.facebook.com/people/Jurisstudy/61566563361135/"><i class="fa-brands fa-facebook"></i></a>
-             <a href="https://www.instagram.com/info.jurisstudy/"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://medium.com/@info.jurisstudy"><i class="fa-brands fa-medium"></i></a>
-           
+            <a href="https://www.instagram.com/info.jurisstudy/"><i class="fa-brands fa-instagram"></i></a>
           </div>
         </div>
       </div>
