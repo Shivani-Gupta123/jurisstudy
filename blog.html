@@ -411,6 +411,99 @@ button:hover {
 /*  width: 35%;*/
 /*}*/
 
+.container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header Styles */
+    header {
+      background-color: #f1f2f4;
+      color: #0b0b0b;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin: 10px 0 0;
+      font-size: 1.2rem;
+      color: rgb(9, 9, 9);
+      text-align: justify;
+    }
+
+    /* Blog Content Styles */
+    .blog {
+      margin: 40px 0;
+    }
+
+    .blog-section {
+      margin-bottom: 40px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .blog-section:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .blog-section h2 {
+      color: #070808;
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+    }
+
+    .blog-section p {
+      margin-bottom: 15px;
+      font-size: 1rem;
+      color: #0b0b0b;
+      text-align: justify;
+    }
+
+    .blog-section ul {
+      margin: 15px 0;
+      padding-left: 20px;
+    }
+
+    .blog-section ul li {
+      margin-bottom: 10px;
+      list-style-type: disc;
+    }
+
+    /* Responsive Styles */
+    @media screen and (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .blog-section h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      header p {
+        font-size: 1rem;
+      }
+
+      .blog-section h2 {
+        font-size: 1.3rem;
+      }
+
+      .blog-section p {
+        font-size: 0.9rem;
+      }
+    }
+
 .offer {
   width: 100%;
   background-image: url(images/what\ we\ offer\ backgound\ image[1].png);
@@ -735,11 +828,51 @@ button:hover {
 
 <div class="container">
   <!-- Header Section -->
-  <div class="header">
-    <h1>Our Blog</h1>
-    <p>
-      Explore our enriching blogs that delve into the various gaps, challenges, and future scope of legal research in the contemporary world.
-    </p>
+  <header>
+    <h1>Explore Our Enriching Blogs</h1>
+    <p>Explore our enriching blogs that delve into the various gaps, challenges, and future scope of legal research in the contemporary world.
+
+      We provide in-depth insights into the evolving landscape of legal research, shedding light on the obstacles faced by researchers in today’s fast-paced legal environment. 
+      </p>
+  </header>
+
+  <div class="container">
+    <div class="blog">
+      <div class="blog-section">
+        <h2>Challenges in Implementing Practical Legal Research in Law School Curricula</h2>
+        <p>Legal research is fundamental to the practice of law. However, teaching practical legal research in law schools comes with its own set of challenges.</p>
+        <p>While legal research is a core skill for lawyers, many law school curricula still focus on theoretical learning rather than real-world application.
+        </p>
+        <a style="color: #fd5f00;" href="https://medium.com" target="_blank" class="read-more">Read More</a>
+      </div>
+
+      <!-- <div class="blog-section">
+        <h2>The Disconnect Between Theory and Practice</h2>
+        <p>One of the biggest challenges is the gap between theoretical knowledge and practical skills. Law schools often emphasize doctrinal courses that focus on the study of legal principles and theories.</p>
+        <p>Practical legal research involves more than just understanding the law—it requires the ability to find, analyze, and apply legal information.</p>
+        <a  style="color: #fd5f00;" href="https://medium.com" target="_blank" class="read-more">Read More</a>
+      </div>
+
+      <div class="blog-section">
+        <h2>Lack of Access to Up-to-Date Resources</h2>
+        <p>Many law schools cannot provide students with consistent access to premium databases like Westlaw or LexisNexis due to budgetary constraints.</p>
+        <p>Without proper training on these advanced tools, students may not be able to use them effectively, missing out on valuable research opportunities.</p>
+        <a  style="color: #fd5f00;" href="https://medium.com" target="_blank" class="read-more">Read More</a>
+      </div> -->
+
+      <!-- <div class="blog-section">
+        <h2>Solution: Integrating Practical Legal Research into the Curriculum</h2>
+        <p>To overcome these challenges, law schools must rethink how they teach legal research. Here are some solutions:</p>
+        <ul>
+          <li>Hands-on training with research tools like Westlaw and LexisNexis.</li>
+          <li>Introducing AI-driven tools and other legal technologies.</li>
+          <li>Collaborations with legal practitioners for real-world experience.</li>
+          <li>Faculty development programs to ensure professors are familiar with the latest research tools and techniques.</li>
+        </ul>
+        <p>By bridging the gap between theoretical learning and practical application, law schools can better equip students for success.</p>
+        <a  style="color: #fd5f00;" href="https://medium.com" target="_blank" class="read-more">Read More</a>
+      </div> -->
+    </div>
   </div>
 
   <!-- Blog Post 1 -->
