@@ -379,134 +379,190 @@ button:hover {
   }
 }
 
-/* General Styling */
-.work-sample {
-  padding: 2rem;
-  text-align: center;
-  background-color: #f9f9f9;
-}
-
-.work-sample h1 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 1rem;
-}
-
-.work-sample p {
-  font-size: 1.1rem;
-  color: #666;
-  margin-bottom: 2rem;
-}
-
-.sample-category h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #444;
-}
-
-.sample-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-
-.sample-card {
-  background-color: #fff;
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
   border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
-.sample-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+.card h3 {
+  color: #101010;
+  margin-bottom: 10px;
 }
 
-.sample-card img {
-  width: 100%;
-  height: auto;
+.card p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #070707;
 }
 
-.sample-content {
-  padding: 1rem;
+/* Read More Section Hidden Initially */
+.read-more-content {
+  display: none;
+  margin-top: 10px;
 }
 
-.sample-content h3 {
-  font-size: 1.2rem;
-  color: #222;
-  margin-bottom: 0.5rem;
-}
-
-.sample-content p {
-  font-size: 0.95rem;
-  color: #555;
-  margin-bottom: 1rem;
-}
-
-.view-btn {
+/* Button Styles */
+.read-more-btn {
   display: inline-block;
-  padding: 0.6rem 1.2rem;
-  background-color: #007BFF;
-  color: #fff;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #f96820;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
 }
 
-.view-btn:hover {
-  background-color: #0056b3;
+.read-more-btn:hover {
+  background: #0056b3;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-  .work-sample h1 {
-    font-size: 1.8rem;
-  }
-
-  .work-sample p {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .sample-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .sample-card {
-    margin-bottom: 1rem;
-  }
-
-  .sample-content h3 {
-    font-size: 1.1rem;
-  }
-
-  .sample-content p {
-    font-size: 0.9rem;
-  }
-
-  .view-btn {
-    padding: 0.5rem 1rem;
-  }
+.intellectual-pieces {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Tablet Responsiveness */
-@media (max-width: 1024px) {
-  .sample-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
-
-  .work-sample h1 {
-    font-size: 2rem;
-  }
-  
-  .sample-card {
-    margin-bottom: 1.5rem;
-  }
+/* Header Section */
+.header-section {
+  text-align: center;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, #e7b185, #f8a069);
+  color: rgb(15, 15, 15);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 40px;
 }
 
+.header-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
 
+.header-section p {
+  font-size: 1.2rem;
+}
+
+/* Main Content Layout */
+.main-content {
+  display: flex;
+  gap: 20px;
+}
+
+/* Contribution Card */
+.contribution-card {
+  width: 30%;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 5px solid #150953;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  height:500px;
+}
+
+.contribution-card h2 {
+  color: #161615;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.contribution-card p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: black;
+}
+
+/* Research and Publications Container */
+.research-publications-container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Research Publications */
+.research-publications {
+  background: #f9f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #0c0c0c;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.research-publications h2 {
+  font-size: 1.8rem;
+  color: #060606;
+  margin-bottom: 20px;
+}
+
+.research-publications .card {
+  padding: 15px;
+  background: white;
+  border: 1px solid #263862;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.research-publications .card h3 {
+  color: #090a0a;
+  margin-bottom: 10px;
+}
+
+/* Paper Presentations */
+.paper-presentations {
+  margin-top: 20px;
+  background-color: #f8f8f8;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.paper-presentations h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #080808; /* Green accent color */
+  margin-bottom: 20px;
+}
+
+/* Presentation List */
+.presentation-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Presentation Card */
+.presentation-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.presentation-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.presentation-card h3 {
+  font-size: 1.5rem;
+  color: #070808; /* Darker green */
+  margin-bottom: 10px;
+}
+
+.presentation-card p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #0a0909;
+}
 
 
 
@@ -620,37 +676,155 @@ button:hover {
 </div>
 
 
-<section class="work-sample">
-  <h1>Our Intellectual Pieces</h1>
-  <p>Explore a collection of our legal research, articles, dissertations, and more.</p>
-  
-  <!-- Sample Categories -->
-  <div class="sample-category">
-    <h2>Research Papers</h2>
-    <div class="sample-grid">
-      <!-- Sample Card -->
-      <div class="sample-card">
-        <img style="height: 200px;" src="images/research 1.webp" alt="Research Paper 1">
-        <div class="sample-content">
-          <h3>Research Paper 1</h3>
-          <p>Short summary or abstract of the research paper...</p>
-          <a href="sample1.pdf" target="_blank" class="view-btn">View Sample</a>
+
+
+<div class="intellectual-pieces">
+  <!-- Header -->
+  <header class="header-section">
+    <h1>Intellectual Pieces</h1>
+    <!-- <p>Showcasing groundbreaking contributions in the legal-tech and research fields by our founder.</p> -->
+  </header>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Contribution Card -->
+    <div class="contribution-card">
+      <h1><i>Our Founder’s Contribution In The Legal-Tech Sector</i></h1>
+      <p>🏆 Honored with a <strong>Certificate of Merit</strong> for ranking among the Top 10 authors in the <strong>4th International Legal Essay Writing Competition, 2022</strong> organized by Law College Dehradun in collaboration with the <strong>International Law Students Association (ILSA-LCD Chapter)</strong>on the theme “International Law Regime.”</p>
+      <p>This prestigious award underscores Bhaskar’s strong analytical and writing skills and dedication to advancing legal knowledge on international issues.</p>
+    </div>
+
+    <!-- Research and Publications -->
+    <div class="research-publications-container">
+      <!-- Research Publications -->
+      <section class="research-publications">
+        <h2>Research Publications</h2>
+        <div class="publication-cards">
+          <div class="card">
+            <h3>1. Digital Delinquencies and Democracy</h3>
+            <p><strong>Title:</strong> "Severe Quandary Concerning the Burgeoning of Digital Delinquencies: A Dynamic Approach Vis-à-vis the Idea of a Veritable Democratic Nation".</p>
+             <div class="read-more-content">
+              <p><strong>Published In:</strong> Remaking Criminology: Contemporary Insights from the Criminal Justice System, Bloomsbury Publishing, United Kingdom</p>
+              <p><strong>ISBN:</strong> 978-93-56405-51-6</p>
+              <p><strong>Overview:</strong>This award-winning publication critically examines the rise of digital crimes, including cyberbullying, hacking, and identity theft, which present unique challenges to democratic societies. Bhaskar argues for a dynamic legal approach, with adaptive policies that protect citizens’ rights while fostering responsible digital behavior. By emphasizing the balance between security and freedom, this work suggests innovative frameworks for legal reform.</p>
+              <p><strong>Visuals:</strong> A modern digital world map overlayed with symbols of cyber threats, a symbolic balance scale, and digital code imagery in muted colors representing technology and law.
+              </p>
+            </div>
+            <button class="read-more-btn">Read More</button>
+          </div>
+          <div class="card">
+            <h3>2. Environmental Concerns in a Technocratic Age</h3>
+            <p><strong>Title:</strong> "Burgeoning Technocratic Vicissitude paving the way for a Hollow Environmental Structure: A Succinct Overview"</p>
+            <div class="read-more-content">
+              <p><strong>Published In:</strong> Rights, Nature, and Sustainability, Hidayatullah National Law University, Raipur</p>
+            <p><strong>ISBN:</strong>978-81-957449-2-3</p>
+            <p><strong>Overview:</strong>This research highlights the pressing need to protect India’s unique biodiversity and traditional knowledge systems under threat from globalization and commercial exploitation. Bhaskar makes a compelling case for stronger legal protections that respect indigenous rights and conserve cultural heritage, drawing connections between biodiversity and national identity.</p>
+            <p><strong>Visuals:</strong> Industrial and natural landscape juxtaposition, with contrasting images of urbanization and green landscapes to underscore the environmental cost of technological expansion.</p>
+            </div>
+            <button class="read-more-btn">Read More</button>
+          </div>
+          <div class="card">
+            <h3>3. Safeguarding Biodiversity and Traditional Knowledge in India</h3>
+            <p><strong>Title:</strong> "Anatomizing a Regal View of Biodiversity and Extinct Traditional Knowledge in India"</p>
+            <div class="read-more-content">
+              <p><strong>Published In:</strong>Rights, Nature, and Sustainability, Hidayatullah National Law University, Raipur
+              </p>
+              <p><strong>ISBN:</strong> 978-93-56405-51-6</p>
+              <p><strong>Overview:</strong>This award-winning publication critically examines the rise of digital crimes, including cyberbullying, hacking, and identity theft, which present unique challenges to democratic societies. Bhaskar argues for a dynamic legal approach, with adaptive policies that protect citizens’ rights while fostering responsible digital behavior. By emphasizing the balance between security and freedom, this work suggests innovative frameworks for legal reform.</p>
+              <p><strong>Visuals:</strong>Indian wildlife and cultural symbols, showing traditional practices and indigenous flora and fauna that need protection.</p>
+            </div>
+            <button class="read-more-btn">Read More</button>
+          </div>
+          <div class="card">
+            <h3>4. Public Health Policy Challenges in India</h3>
+            <p><strong>Title:</strong> "Gut-Wrenching Effervescence of Discombobulated Medical System on The Public Health: Analyzing the State of Severe Dilemma Concerning Inefficient Regulation of Public Health Care Policies in India"</p>
+            <div class="read-more-content">
+              <p><strong>Published In:</strong> Public Health Care System in India: Issues and Challenges, Shankar Rao Chavan Law College, Pune
+              </p>
+              <p><strong>ISBN:</strong> 978-93-5773-916-0</p>
+              <p><strong>Overview:</strong>This paper critiques the gaps in India's public health policies, particularly the lack of accessible healthcare services for marginalized populations. Bhaskar’s analysis includes case studies of regulatory inefficiencies and offers strategic reforms to improve policy enforcement, patient rights, and healthcare accessibility.
+              </p>
+              <p><strong>Visuals:</strong>Symbolic representations of healthcare, such as stethoscopes, hospital corridors, and images of rural healthcare challenges in India, conveying both urgency and hope for reform.
+              </p>
+            </div>
+            <button class="read-more-btn">Read More</button>
+          </div>
+          <div class="card">
+            <h3>5. Environmental Law in the Indian Context
+            </h3>
+            <p><strong>Title:</strong> "A Comprehensive Perusal of The Intrinsic Adversities Concerning Environment in The Modern Scenario: An Indian Outlook"</p>
+            <div class="read-more-content">
+              <p><strong>Published In:</strong> Lex Terra, National Law University and Judicial Academy Assam
+              </p>
+              <p><strong>ISBN:</strong> 2455-0965
+              </p>
+              <p><strong>Overview:</strong> This article addresses India’s environmental crisis by examining regulatory loopholes and proposing solutions tailored to the country’s unique ecological challenges. Bhaskar emphasizes the importance of public awareness and legal action in safeguarding India’s natural resources against climate change, pollution, and habitat destruction.</p>
+              <p><strong>Visuals:</strong> Indian landscapes with ecological symbols such as rivers, forests, and pollution-free air, illustrating the need for conservation laws.
+              </p>
+            </div>
+            <button class="read-more-btn">Read More</button>
+          </div>
         </div>
-      </div>
-      <!-- Additional Sample Cards -->
-      <div class="sample-card">
-        <img style="height: 200px;" src="images/research.jpeg" alt="Research Paper 2">
-        <div class="sample-content">
-          <h3>Research Paper 2</h3>
-          <p>Short summary or abstract of the research paper...</p>
-          <a href="research.pdf" target="_blank" class="view-btn">View Sample</a>
-        </div>
-      </div>
+      </section>
+
+      <!-- Paper Presentations -->
+    
     </div>
   </div>
+  <section class="paper-presentations">
+    <h2>Paper Presentations</h2>
+    <div class="presentation-list">
+      <div class="presentation-card">
+        <h3>Digital Delinquencies</h3>
+        <p><strong>Event:</strong> International Symposium on “Remaking Criminology,” Delhi Metropolitan Education Law School
+        </p>
+        <p><strong>Date:</strong> March 17-18, 2023</p>
+        <p><strong>Presentation Title:</strong>  "Severe Quandary Concerning the Burgeoning of Digital Delinquencies: A Dynamic Approach"
+        </p>
+        <p><strong>Highlights:</strong> Bhaskar’s presentation explores the dark side of digital expansion and its consequences for democracy. He advocates for stronger cybersecurity measures and legal education to foster a digitally literate and safe society. The presentation includes case studies and a discussion on the limitations of current laws.
+        </p>
+      </div>
+      <div class="presentation-card">
+        <h3>Social Justice and Marital Rights in India</h3>
+        <p><strong>Event:</strong> International Seminar on “Rights of Women, Children, and Human Rights,” Law Mantra Trust with MNLU & HPNLU
+        </p>
+        <p><strong>Date:</strong>December 24, 2022</p>
+        <p><strong>Presentation Title:</strong>"Epistemology Concerning the Augmentation of Social Quandary and Despondency: Marital Rape in the Light of Social Injustice in India"</p>
+        <p><strong>Highlights:</strong>Bhaskar sheds light on the sensitive issue of marital rape, dissecting social and legal aspects, and advocating for progressive reforms. His in-depth analysis calls for judicial and legislative alignment with global human rights standards.</p>
+      </div>
+      <div class="presentation-card">
+        <h3>Constitutional Paradigms in India</h3>
+        <p><strong>Event:</strong> International Conference on “Constitutional Law & Human Rights,” AGISS Research Institute</p>
+        <p><strong>Date:</strong>December 11, 2022</p>
+        <p><strong>Presentation Title:</strong> "Entrancing the Historical Outlook of Constitutional Paradigm in India: Veritable Democratic Institution and Judicial Reforms in India" </p>
+        <p><strong>Highlights:</strong> Bhaskar’s presentation explores the dark side of digital expansion and its consequences for democracy. He advocates for stronger cybersecurity measures and legal education to foster a digitally literate and safe society. The presentation includes case studies and a discussion on the limitations of current laws.
+        </p>
+      </div>
+      <div class="presentation-card">
+        <h3>Digital Delinquencies</h3>
+        <p><strong>Event:</strong> International Symposium on “Remaking Criminology,” Delhi Metropolitan Education Law School
+        </p>
+        <p><strong>Date:</strong> March 17-18, 2023</p>
+        <p><strong>Presentation Title:</strong>  "Severe Quandary Concerning the Burgeoning of Digital Delinquencies: A Dynamic Approach"
+        </p>
+        <p><strong>Highlights:</strong> Bhaskar’s presentation explores the dark side of digital expansion and its consequences for democracy. He advocates for stronger cybersecurity measures and legal education to foster a digitally literate and safe society. The presentation includes case studies and a discussion on the limitations of current laws.
+        </p>
+      </div>
+      <div class="presentation-card">
+        <h3>Digital Delinquencies</h3>
+        <p><strong>Event:</strong> International Symposium on “Remaking Criminology,” Delhi Metropolitan Education Law School
+        </p>
+        <p><strong>Date:</strong> March 17-18, 2023</p>
+        <p><strong>Presentation Title:</strong>  "Severe Quandary Concerning the Burgeoning of Digital Delinquencies: A Dynamic Approach"
+        </p>
+        <p><strong>Highlights:</strong> Bhaskar’s presentation explores the dark side of digital expansion and its consequences for democracy. He advocates for stronger cybersecurity measures and legal education to foster a digitally literate and safe society. The presentation includes case studies and a discussion on the limitations of current laws.
+        </p>
+      </div>
+      
+    </div>
+  </section>
+</div>
 
-  <!-- Repeat for other categories like Legal Articles, Case Studies -->
-</section>
 
 
   <div class="Form">
@@ -829,6 +1003,26 @@ document.getElementById("toggle-menu").addEventListener("click", function() {
                 alert("Please enter a valid email address.");
             }
         });
+    </script>
+
+    <script>
+      // JavaScript to toggle the "Read More" content
+document.querySelectorAll('.read-more-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    const card = button.closest('.card');
+    const readMoreContent = card.querySelector('.read-more-content');
+
+    // Toggle visibility
+    if (readMoreContent.style.display === 'none' || readMoreContent.style.display === '') {
+      readMoreContent.style.display = 'block';
+      button.textContent = 'Read Less';
+    } else {
+      readMoreContent.style.display = 'none';
+      button.textContent = 'Read More';
+    }
+  });
+});
+
     </script>
   
  
