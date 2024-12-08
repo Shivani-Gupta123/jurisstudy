@@ -386,17 +386,19 @@ button:hover {
   border: 1px solid #ddd;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
+  word-spacing: 5px;
 }
 
 .card h3 {
   color: #101010;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .card p {
-  margin: 5px 0;
+  margin: 10px 0;
   font-size: 1rem;
   color: #070707;
+  text-align: justify;
 }
 
 /* Read More Section Hidden Initially */
@@ -430,64 +432,63 @@ button:hover {
 }
 
 /* Header Section */
+/* Global Styles */
+
+/* Header Section */
 .header-section {
   text-align: center;
-  padding: 30px 20px;
+  padding: 20px;
   background: linear-gradient(135deg, #e7b185, #f8a069);
   color: rgb(15, 15, 15);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .header-section h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+  font-size: 2rem;
 }
 
 .header-section p {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 /* Main Content Layout */
 .main-content {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
+  padding: 10px;
 }
 
 /* Contribution Card */
 .contribution-card {
-  width: 30%;
+  flex: 1 1 100%; /* Full width by default */
+  max-width: 100%; /* Prevent overflow */
   background: white;
   padding: 20px;
   border-radius: 10px;
   border-left: 5px solid #150953;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  position: relative;
-  height:500px;
 }
 
-.contribution-card h2 {
-  color: #161615;
-  margin-bottom: 15px;
+.contribution-card h1 {
   font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
 .contribution-card p {
-  font-size: 1rem;
-  line-height: 1.8;
+  font-size: 0.9rem;
+  word-spacing: 5px;
+  line-height: 1.6;
   color: black;
 }
 
 /* Research and Publications Container */
 .research-publications-container {
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  flex: 1 1 100%; /* Full width by default */
 }
 
-/* Research Publications */
 .research-publications {
   background: #f9f9fa;
   padding: 20px;
@@ -497,9 +498,8 @@ button:hover {
 }
 
 .research-publications h2 {
-  font-size: 1.8rem;
-  color: #060606;
-  margin-bottom: 20px;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
 }
 
 .research-publications .card {
@@ -507,14 +507,79 @@ button:hover {
   background: white;
   border: 1px solid #263862;
   border-radius: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .research-publications .card h3 {
-  color: #090a0a;
-  margin-bottom: 10px;
+  font-size: 1rem;
+  margin-bottom: 8px;
 }
+
+.research-publications .read-more-content {
+  display: none;
+}
+
+.research-publications .read-more-btn {
+  background: #263862;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+  .main-content {
+    flex-wrap: nowrap; /* Prevent wrapping on larger screens */
+  }
+
+  .contribution-card {
+    flex: 1 1 30%; /* Occupy 30% of width */
+    max-width: 30%;
+  }
+
+  .research-publications-container {
+    flex: 1 1 70%; /* Occupy 70% of width */
+  }
+
+  .header-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .header-section p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .header-section p {
+    font-size: 1rem;
+  }
+
+  .contribution-card, .research-publications-container {
+    flex: 1 1 100%; /* Full width on smaller screens */
+    max-width: 100%;
+  }
+
+  .research-publications h2 {
+    font-size: 1.3rem;
+  }
+
+  .research-publications .card h3 {
+    font-size: 1rem;
+  }
+
+  .research-publications .read-more-btn {
+    padding: 8px 12px;
+  }
+}
+
 
 /* Paper Presentations */
 .paper-presentations {
@@ -542,9 +607,12 @@ button:hover {
 .presentation-card {
   background: #ffffff;
   padding: 20px;
+  text-align: justify;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
+  word-spacing: 3px;
+  margin-bottom: 10px;
 }
 
 .presentation-card:hover {
@@ -555,11 +623,11 @@ button:hover {
 .presentation-card h3 {
   font-size: 1.5rem;
   color: #070808; /* Darker green */
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .presentation-card p {
-  margin: 5px 0;
+  margin: 10px 0;
   font-size: 1rem;
   color: #0a0909;
 }
@@ -702,49 +770,49 @@ button:hover {
         <div class="publication-cards">
           <div class="card">
             <h3>1. Digital Delinquencies and Democracy</h3>
-            <p><strong>Title:</strong> "Severe Quandary Concerning the Burgeoning of Digital Delinquencies: A Dynamic Approach Vis-à-vis the Idea of a Veritable Democratic Nation".</p>
+            <p><strong>Title :</strong> "Severe Quandary Concerning the Burgeoning of Digital Delinquencies: A Dynamic Approach Vis-à-vis the Idea of a Veritable Democratic Nation".</p>
              <div class="read-more-content">
-              <p><strong>Published In:</strong> Remaking Criminology: Contemporary Insights from the Criminal Justice System, Bloomsbury Publishing, United Kingdom</p>
-              <p><strong>ISBN:</strong> 978-93-56405-51-6</p>
-              <p><strong>Overview:</strong>This award-winning publication critically examines the rise of digital crimes, including cyberbullying, hacking, and identity theft, which present unique challenges to democratic societies. Bhaskar argues for a dynamic legal approach, with adaptive policies that protect citizens’ rights while fostering responsible digital behavior. By emphasizing the balance between security and freedom, this work suggests innovative frameworks for legal reform.</p>
-              <p><strong>Visuals:</strong> A modern digital world map overlayed with symbols of cyber threats, a symbolic balance scale, and digital code imagery in muted colors representing technology and law.
+              <p><strong>Published In :</strong> Remaking Criminology: Contemporary Insights from the Criminal Justice System, Bloomsbury Publishing, United Kingdom</p>
+              <p><strong>ISBN :</strong> 978-93-56405-51-6</p>
+              <p><strong>Overview :</strong> This award-winning publication critically examines the rise of digital crimes, including cyberbullying, hacking, and identity theft, which present unique challenges to democratic societies. Bhaskar argues for a dynamic legal approach, with adaptive policies that protect citizens’ rights while fostering responsible digital behavior. By emphasizing the balance between security and freedom, this work suggests innovative frameworks for legal reform.</p>
+              <p><strong>Visuals :</strong> A modern digital world map overlayed with symbols of cyber threats, a symbolic balance scale, and digital code imagery in muted colors representing technology and law.
               </p>
             </div>
             <button class="read-more-btn">Read More</button>
           </div>
           <div class="card">
             <h3>2. Environmental Concerns in a Technocratic Age</h3>
-            <p><strong>Title:</strong> "Burgeoning Technocratic Vicissitude paving the way for a Hollow Environmental Structure: A Succinct Overview"</p>
+            <p><strong>Title :</strong> "Burgeoning Technocratic Vicissitude paving the way for a Hollow Environmental Structure: A Succinct Overview"</p>
             <div class="read-more-content">
-              <p><strong>Published In:</strong> Rights, Nature, and Sustainability, Hidayatullah National Law University, Raipur</p>
-            <p><strong>ISBN:</strong>978-81-957449-2-3</p>
-            <p><strong>Overview:</strong>This research highlights the pressing need to protect India’s unique biodiversity and traditional knowledge systems under threat from globalization and commercial exploitation. Bhaskar makes a compelling case for stronger legal protections that respect indigenous rights and conserve cultural heritage, drawing connections between biodiversity and national identity.</p>
-            <p><strong>Visuals:</strong> Industrial and natural landscape juxtaposition, with contrasting images of urbanization and green landscapes to underscore the environmental cost of technological expansion.</p>
+              <p><strong>Published In :</strong> Rights, Nature, and Sustainability, Hidayatullah National Law University, Raipur</p>
+            <p><strong>ISBN :</strong> 978-81-957449-2-3</p>
+            <p><strong>Overview :</strong> This research highlights the pressing need to protect India’s unique biodiversity and traditional knowledge systems under threat from globalization and commercial exploitation. Bhaskar makes a compelling case for stronger legal protections that respect indigenous rights and conserve cultural heritage, drawing connections between biodiversity and national identity.</p>
+            <p><strong>Visuals :</strong> Industrial and natural landscape juxtaposition, with contrasting images of urbanization and green landscapes to underscore the environmental cost of technological expansion.</p>
             </div>
             <button class="read-more-btn">Read More</button>
           </div>
           <div class="card">
             <h3>3. Safeguarding Biodiversity and Traditional Knowledge in India</h3>
-            <p><strong>Title:</strong> "Anatomizing a Regal View of Biodiversity and Extinct Traditional Knowledge in India"</p>
+            <p><strong>Title :</strong> "Anatomizing a Regal View of Biodiversity and Extinct Traditional Knowledge in India"</p>
             <div class="read-more-content">
-              <p><strong>Published In:</strong>Rights, Nature, and Sustainability, Hidayatullah National Law University, Raipur
+              <p><strong>Published In :</strong> Rights, Nature, and Sustainability, Hidayatullah National Law University, Raipur
               </p>
-              <p><strong>ISBN:</strong> 978-93-56405-51-6</p>
-              <p><strong>Overview:</strong>This award-winning publication critically examines the rise of digital crimes, including cyberbullying, hacking, and identity theft, which present unique challenges to democratic societies. Bhaskar argues for a dynamic legal approach, with adaptive policies that protect citizens’ rights while fostering responsible digital behavior. By emphasizing the balance between security and freedom, this work suggests innovative frameworks for legal reform.</p>
-              <p><strong>Visuals:</strong>Indian wildlife and cultural symbols, showing traditional practices and indigenous flora and fauna that need protection.</p>
+              <p><strong>ISBN :</strong> 978-93-56405-51-6</p>
+              <p><strong>Overview :</strong> This award-winning publication critically examines the rise of digital crimes, including cyberbullying, hacking, and identity theft, which present unique challenges to democratic societies. Bhaskar argues for a dynamic legal approach, with adaptive policies that protect citizens’ rights while fostering responsible digital behavior. By emphasizing the balance between security and freedom, this work suggests innovative frameworks for legal reform.</p>
+              <p><strong>Visuals :</strong> Indian wildlife and cultural symbols, showing traditional practices and indigenous flora and fauna that need protection.</p>
             </div>
             <button class="read-more-btn">Read More</button>
           </div>
           <div class="card">
             <h3>4. Public Health Policy Challenges in India</h3>
-            <p><strong>Title:</strong> "Gut-Wrenching Effervescence of Discombobulated Medical System on The Public Health: Analyzing the State of Severe Dilemma Concerning Inefficient Regulation of Public Health Care Policies in India"</p>
+            <p><strong>Title :</strong> "Gut-Wrenching Effervescence of Discombobulated Medical System on The Public Health: Analyzing the State of Severe Dilemma Concerning Inefficient Regulation of Public Health Care Policies in India"</p>
             <div class="read-more-content">
-              <p><strong>Published In:</strong> Public Health Care System in India: Issues and Challenges, Shankar Rao Chavan Law College, Pune
+              <p><strong>Published In :</strong> Public Health Care System in India: Issues and Challenges, Shankar Rao Chavan Law College, Pune
               </p>
-              <p><strong>ISBN:</strong> 978-93-5773-916-0</p>
-              <p><strong>Overview:</strong>This paper critiques the gaps in India's public health policies, particularly the lack of accessible healthcare services for marginalized populations. Bhaskar’s analysis includes case studies of regulatory inefficiencies and offers strategic reforms to improve policy enforcement, patient rights, and healthcare accessibility.
+              <p><strong>ISBN :</strong> 978-93-5773-916-0</p>
+              <p><strong>Overview :</strong> This paper critiques the gaps in India's public health policies, particularly the lack of accessible healthcare services for marginalized populations. Bhaskar’s analysis includes case studies of regulatory inefficiencies and offers strategic reforms to improve policy enforcement, patient rights, and healthcare accessibility.
               </p>
-              <p><strong>Visuals:</strong>Symbolic representations of healthcare, such as stethoscopes, hospital corridors, and images of rural healthcare challenges in India, conveying both urgency and hope for reform.
+              <p><strong>Visuals :</strong> Symbolic representations of healthcare, such as stethoscopes, hospital corridors, and images of rural healthcare challenges in India, conveying both urgency and hope for reform.
               </p>
             </div>
             <button class="read-more-btn">Read More</button>
@@ -752,14 +820,14 @@ button:hover {
           <div class="card">
             <h3>5. Environmental Law in the Indian Context
             </h3>
-            <p><strong>Title:</strong> "A Comprehensive Perusal of The Intrinsic Adversities Concerning Environment in The Modern Scenario: An Indian Outlook"</p>
+            <p><strong>Title :</strong> "A Comprehensive Perusal of The Intrinsic Adversities Concerning Environment in The Modern Scenario: An Indian Outlook"</p>
             <div class="read-more-content">
-              <p><strong>Published In:</strong> Lex Terra, National Law University and Judicial Academy Assam
+              <p><strong>Published In :</strong> Lex Terra, National Law University and Judicial Academy Assam
               </p>
-              <p><strong>ISBN:</strong> 2455-0965
+              <p><strong>ISBN :</strong> 2455-0965
               </p>
-              <p><strong>Overview:</strong> This article addresses India’s environmental crisis by examining regulatory loopholes and proposing solutions tailored to the country’s unique ecological challenges. Bhaskar emphasizes the importance of public awareness and legal action in safeguarding India’s natural resources against climate change, pollution, and habitat destruction.</p>
-              <p><strong>Visuals:</strong> Indian landscapes with ecological symbols such as rivers, forests, and pollution-free air, illustrating the need for conservation laws.
+              <p><strong>Overview :</strong> This article addresses India’s environmental crisis by examining regulatory loopholes and proposing solutions tailored to the country’s unique ecological challenges. Bhaskar emphasizes the importance of public awareness and legal action in safeguarding India’s natural resources against climate change, pollution, and habitat destruction.</p>
+              <p><strong>Visuals :</strong> Indian landscapes with ecological symbols such as rivers, forests, and pollution-free air, illustrating the need for conservation laws.
               </p>
             </div>
             <button class="read-more-btn">Read More</button>
@@ -776,47 +844,47 @@ button:hover {
     <div class="presentation-list">
       <div class="presentation-card">
         <h3>Digital Delinquencies</h3>
-        <p><strong>Event:</strong> International Symposium on “Remaking Criminology,” Delhi Metropolitan Education Law School
+        <p><strong>Event :</strong> International Symposium on “Remaking Criminology,” Delhi Metropolitan Education Law School
         </p>
-        <p><strong>Date:</strong> March 17-18, 2023</p>
-        <p><strong>Presentation Title:</strong>  "Severe Quandary Concerning the Burgeoning of Digital Delinquencies: A Dynamic Approach"
+        <p><strong>Date :</strong> March 17-18, 2023</p>
+        <p><strong>Presentation Title :</strong>  "Severe Quandary Concerning the Burgeoning of Digital Delinquencies: A Dynamic Approach"
         </p>
-        <p><strong>Highlights:</strong> Bhaskar’s presentation explores the dark side of digital expansion and its consequences for democracy. He advocates for stronger cybersecurity measures and legal education to foster a digitally literate and safe society. The presentation includes case studies and a discussion on the limitations of current laws.
+        <p><strong>Highlights :</strong> Bhaskar’s presentation explores the dark side of digital expansion and its consequences for democracy. He advocates for stronger cybersecurity measures and legal education to foster a digitally literate and safe society. The presentation includes case studies and a discussion on the limitations of current laws.
         </p>
       </div>
       <div class="presentation-card">
         <h3>Social Justice and Marital Rights in India</h3>
-        <p><strong>Event:</strong> International Seminar on “Rights of Women, Children, and Human Rights,” Law Mantra Trust with MNLU & HPNLU
+        <p><strong>Event :</strong> International Seminar on “Rights of Women, Children, and Human Rights,” Law Mantra Trust with MNLU & HPNLU
         </p>
-        <p><strong>Date:</strong>December 24, 2022</p>
-        <p><strong>Presentation Title:</strong>"Epistemology Concerning the Augmentation of Social Quandary and Despondency: Marital Rape in the Light of Social Injustice in India"</p>
-        <p><strong>Highlights:</strong>Bhaskar sheds light on the sensitive issue of marital rape, dissecting social and legal aspects, and advocating for progressive reforms. His in-depth analysis calls for judicial and legislative alignment with global human rights standards.</p>
+        <p><strong>Date :</strong> December 24, 2022</p>
+        <p><strong>Presentation Title :</strong> "Epistemology Concerning the Augmentation of Social Quandary and Despondency: Marital Rape in the Light of Social Injustice in India"</p>
+        <p><strong>Highlights :</strong> Bhaskar sheds light on the sensitive issue of marital rape, dissecting social and legal aspects, and advocating for progressive reforms. His in-depth analysis calls for judicial and legislative alignment with global human rights standards.</p>
       </div>
       <div class="presentation-card">
         <h3>Constitutional Paradigms in India</h3>
-        <p><strong>Event:</strong> International Conference on “Constitutional Law & Human Rights,” AGISS Research Institute</p>
-        <p><strong>Date:</strong>December 11, 2022</p>
-        <p><strong>Presentation Title:</strong> "Entrancing the Historical Outlook of Constitutional Paradigm in India: Veritable Democratic Institution and Judicial Reforms in India" </p>
+        <p><strong>Event :</strong> International Conference on “Constitutional Law & Human Rights,” AGISS Research Institute</p>
+        <p><strong>Date :</strong> December 11, 2022</p>
+        <p><strong>Presentation Title :</strong> "Entrancing the Historical Outlook of Constitutional Paradigm in India: Veritable Democratic Institution and Judicial Reforms in India" </p>
         <p><strong>Highlights:</strong> Bhaskar’s presentation explores the dark side of digital expansion and its consequences for democracy. He advocates for stronger cybersecurity measures and legal education to foster a digitally literate and safe society. The presentation includes case studies and a discussion on the limitations of current laws.
         </p>
       </div>
       <div class="presentation-card">
         <h3>Juvenile Justice and Social Challenges</h3>
-        <p><strong>Event:</strong> International E-Conference on “Law and Society,” REVA University</p>
-        <p><strong>Date:</strong>December 2, 2022</p>
-        <p><strong>Presentation Title:</strong>"A Holistic Perusal of Juvenile Delinquency and Social Suffering: Causes and Role of Detention Centers in India"
+        <p><strong>Event :</strong> International E-Conference on “Law and Society,” REVA University</p>
+        <p><strong>Date :</strong> December 2, 2022</p>
+        <p><strong>Presentation Title :</strong> "A Holistic Perusal of Juvenile Delinquency and Social Suffering: Causes and Role of Detention Centers in India"
         </p>
-        <p><strong>Highlights:</strong>This talk identifies the root causes of juvenile delinquency and evaluates India’s juvenile detention centers, advocating for an overhaul in juvenile rehabilitation practices to better integrate youth back into society.</p>
+        <p><strong>Highlights:</strong> This talk identifies the root causes of juvenile delinquency and evaluates India’s juvenile detention centers, advocating for an overhaul in juvenile rehabilitation practices to better integrate youth back into society.</p>
       </div>
       <div class="presentation-card">
         <h3>Technocratic Influence on Environmental Sustainability
         </h3>
-        <p><strong>Event:</strong> International E-Conference on “Environment, Climate Change and Sustainability,” IPEM Law Academy
+        <p><strong>Event :</strong> International E-Conference on “Environment, Climate Change and Sustainability,” IPEM Law Academy
         </p>
-        <p><strong>Date:</strong>October 15, 2022</p>
-        <p><strong>Presentation Title:</strong> "Burgeoning Technocratic Vicissitude and Environmental Structure in India: A Succinct Overview"
+        <p><strong>Date :</strong> October 15, 2022</p>
+        <p><strong>Presentation Title :</strong> "Burgeoning Technocratic Vicissitude and Environmental Structure in India: A Succinct Overview"
         </p>
-        <p><strong>Highlights:</strong>In this session, Bhaskar critically assesses India’s environmental policies in the context of rapid technological development, proposing sustainable solutions to balance industrial growth with environmental conservation.</p>
+        <p><strong>Highlights :</strong> In this session, Bhaskar critically assesses India’s environmental policies in the context of rapid technological development, proposing sustainable solutions to balance industrial growth with environmental conservation.</p>
       </div>
       
     </div>
