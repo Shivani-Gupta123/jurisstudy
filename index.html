@@ -12,139 +12,544 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <style>
-    
+/*     
     body {
       font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
-    }
+    } */
 
+    /* General styles */
+.header {
+  background-color: #f8f9fa;
+}
 
-.contact-buttons {
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1000;
-    display: flex;
+.header_main {
+  margin: 0px;
+  margin-top: -30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header_1 img {
+  height: auto;
+  max-width: 50%;
+}
+
+.header_2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.header_2_col1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header_icon i {
+  font-size: 30px;
+  color: #ea631a;
+}
+
+.header_email h5 {
+  margin: 0;
+  font-size: 24px;
+  color: #070707;
+}
+
+.header_email p,
+.header_email a p {
+  margin: 0;
+  font-size: 16px;
+  color: #ea631a;
+  text-decoration: none;
+}
+
+#apply-now-btn button {
+  background-color: #ea631a;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#apply-now-btn button:hover {
+  background-color: #081861;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header_main {
     flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .header_2 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  #apply-now-btn button {
+    width: 100%;
+    text-align: center;
+  }
 }
 
- /*whatsapp ccs start*/
- #whatsapp {
-position: fixed;
-right: 15px;
-bottom: 4%;
-width: 70px;
-height: 70px;
-cursor: pointer;
-opacity: 1;
-z-index: 99990;
+@media (max-width: 480px) {
+  .header_email h5 {
+    font-size: 12px;
+  }
+
+  .header_email p,
+  .header_email a p {
+    font-size: 11px;
+  }
+
+  #apply-now-btn button {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
 }
+
+/* whatsapp button */
+#whatsapp {
+  position: fixed;
+  bottom: 20px; /* Adjust for desired placement */
+  right: 20px;  /* Adjust for desired placement */
+  z-index: 1000;
+}
+
 #whatsapp #whatsappMain {
--moz-border-radius: 50% !important;
--webkit-border-radius: 50% !important;
-border-radius: 50% !important;
--moz-background-clip: padding;
--webkit-background-clip: padding-box;
-background-clip: padding-box;
-background-color: rgba(255, 255, 255, 0);
-width: 70px;
-height: 70px;
-color: #40c351;
-z-index: 9;
--webkit-animation: zcwmini2 1.5s 0s ease-out infinite;
--moz-animation: zcwmini2 1.5s 0s ease-out infinite;
-animation: zcwmini2 1.5s 0s ease-out infinite;
+  -moz-border-radius: 50% !important;
+  -webkit-border-radius: 50% !important;
+  border-radius: 50% !important;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background-color: rgba(255, 255, 255, 0);
+  width: 70px;
+  height: 70px;
+  color: #40c351;
+  z-index: 9;
+  -webkit-animation: zcwmini2 1.5s 0s ease-out infinite;
+  -moz-animation: zcwmini2 1.5s 0s ease-out infinite;
+  animation: zcwmini2 1.5s 0s ease-out infinite;
 }
+
 #whatsapp #whatsappMain:before {
-content: "";
-position: absolute;
-width: 100%;
-height: 100%;
-top: 0;
-left: 0;
-z-index: 9;
- background-image: url('./images/whatsapp.png');;
-background-repeat: no-repeat;
-background-position: center center;
--webkit-animation: zcwphone2 1.5s linear infinite;
--moz-animation: zcwphone2 1.5s linear infinite;
-animation: zcwphone2 1.5s linear infinite;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  background-image: url('./images/whatsapp.png'); /* Replace with your actual image path */
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-animation: zcwphone2 1.5s linear infinite;
+  -moz-animation: zcwphone2 1.5s linear infinite;
+  animation: zcwphone2 1.5s linear infinite;
 }
-@-webkit-keyframes zcwphone {
-0% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
-25% {-ms-transform:rotate(30deg);-webkit-transform:rotate(30deg);transform:rotate(30deg);}
-50% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
-75% {-ms-transform:rotate(-30deg);-webkit-transform:rotate(-30deg);transform:rotate(-30deg);}
-100% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
-}
-@-moz-keyframes zcwphone {
-0% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
-25% {-ms-transform:rotate(30deg);-webkit-transform:rotate(30deg);transform:rotate(30deg);}
-50% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
-75% {-ms-transform:rotate(-30deg);-webkit-transform:rotate(-30deg);transform:rotate(-30deg);}
-100% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
-}
-@keyframes zcwphone {
-0% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
-25% {-ms-transform:rotate(30deg);-webkit-transform:rotate(30deg);transform:rotate(30deg);}
-50% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
-75% {-ms-transform:rotate(-30deg);-webkit-transform:rotate(-30deg);transform:rotate(-30deg);}
-100% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
-}
+
 @-webkit-keyframes zcwphone2 {
-0% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
-25% {-ms-transform:rotate(30deg);-webkit-transform:rotate(30deg);transform:rotate(30deg);}
-50% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
-75% {-ms-transform:rotate(-30deg);-webkit-transform:rotate(-30deg);transform:rotate(-30deg);}
-100% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
-@-moz-keyframes zcwphone2 {
-0% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
-25% {-ms-transform:rotate(30deg);-webkit-transform:rotate(30deg);transform:rotate(30deg);}
-50% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
-75% {-ms-transform:rotate(-30deg);-webkit-transform:rotate(-30deg);transform:rotate(-30deg);}
-100% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
-}
+
 @keyframes zcwphone2 {
-0% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
-25% {-ms-transform:rotate(30deg);-webkit-transform:rotate(30deg);transform:rotate(30deg);}
-50% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
-75% {-ms-transform:rotate(-30deg);-webkit-transform:rotate(-30deg);transform:rotate(-30deg);}
-100% {-ms-transform:rotate(0deg);-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
-@-webkit-keyframes zcwmini {
-0% {box-shadow: 0 0 8px 6px rgba(207,8,8, 0), 0 0 0 0 rgba(0,0,0,0), 0 0 0 0 rgba(207,8,8, 0);}
-10% {box-shadow: 0 0 8px 6px , 0 0 12px 10px rgba(0,0,0,0), 0 0 12px 14px ;}
-100% {box-shadow: 0 0 8px 6px rgba(207,8,8, 0), 0 0 0 40px rgba(0,0,0,0), 0 0 0 40px rgba(207,8,8, 0);}
-}
-@-moz-keyframes zcwmini {
-0% {box-shadow: 0 0 8px 6px rgba(207,8,8, 0), 0 0 0 0 rgba(0,0,0,0), 0 0 0 0 rgba(207,8,8, 0);}
-10% {box-shadow: 0 0 8px 6px , 0 0 12px 10px rgba(0,0,0,0), 0 0 12px 14px ;}
-100% {box-shadow: 0 0 8px 6px rgba(207,8,8, 0), 0 0 0 40px rgba(0,0,0,0), 0 0 0 40px rgba(207,8,8, 0);}
-}
-@keyframes zcwmini {
-0% {box-shadow: 0 0 8px 6px rgba(207,8,8, 0), 0 0 0 0 rgba(0,0,0,0), 0 0 0 0 rgba(207,8,8, 0);}
-10% {box-shadow: 0 0 8px 6px , 0 0 12px 10px rgba(0,0,0,0), 0 0 12px 14px ;}
-100% {box-shadow: 0 0 8px 6px rgba(207,8,8, 0), 0 0 0 40px rgba(0,0,0,0), 0 0 0 40px rgba(207,8,8, 0);}
-}
+
 @-webkit-keyframes zcwmini2 {
-0% {box-shadow: 0 0 8px 6px rgba(207,8,8, 0), 0 0 0 0 rgba(0,0,0,0), 0 0 0 0 rgba(207,8,8, 0);}
-10% {box-shadow: 0 0 8px 6px , 0 0 12px 10px rgba(0,0,0,0), 0 0 12px 14px ;}
-100% {box-shadow: 0 0 8px 6px rgba(207,8,8, 0), 0 0 0 40px rgba(0,0,0,0), 0 0 0 40px rgba(207,8,8, 0);}
+  0% {
+    box-shadow: 0 0 8px 6px rgba(207, 8, 8, 0), 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(207, 8, 8, 0);
+  }
+  10% {
+    box-shadow: 0 0 8px 6px, 0 0 12px 10px rgba(0, 0, 0, 0), 0 0 12px 14px;
+  }
+  100% {
+    box-shadow: 0 0 8px 6px rgba(207, 8, 8, 0), 0 0 0 40px rgba(0, 0, 0, 0), 0 0 0 40px rgba(207, 8, 8, 0);
+  }
 }
-@-moz-keyframes zcwmini2 {
-0% {box-shadow: 0 0 8px 6px rgba(207,8,8, 0), 0 0 0 0 rgba(0,0,0,0), 0 0 0 0 rgba(207,8,8, 0);}
-10% {box-shadow: 0 0 8px 6px , 0 0 12px 10px rgba(0,0,0,0), 0 0 12px 14px ;}
-100% {box-shadow: 0 0 8px 6px rgba(207,8,8, 0), 0 0 0 40px rgba(0,0,0,0), 0 0 0 40px rgba(207,8,8, 0);}
-}
+
 @keyframes zcwmini2 {
-0% {box-shadow: 0 0 8px 6px rgba(207,8,8, 0), 0 0 0 0 rgba(0,0,0,0), 0 0 0 0 rgba(207,8,8, 0);}
-10% {box-shadow: 0 0 8px 6px , 0 0 12px 10px rgba(0,0,0,0), 0 0 12px 14px ;}
-100% {box-shadow: 0 0 8px 6px rgba(207,8,8, 0), 0 0 0 40px rgba(0,0,0,0), 0 0 0 40px rgba(207,8,8, 0);}
+  0% {
+    box-shadow: 0 0 8px 6px rgba(207, 8, 8, 0), 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(207, 8, 8, 0);
+  }
+  10% {
+    box-shadow: 0 0 8px 6px, 0 0 12px 10px rgba(0, 0, 0, 0), 0 0 12px 14px;
+  }
+  100% {
+    box-shadow: 0 0 8px 6px rgba(207, 8, 8, 0), 0 0 0 40px rgba(0, 0, 0, 0), 0 0 0 40px rgba(207, 8, 8, 0);
+  }
 }
+
+@media (max-width: 768px) {
+  #whatsapp {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  #whatsapp #whatsappMain {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #0d1128; 
+  width: 100%;
+}
+
+.nav_main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+}
+
+/* Logo Styling */
+.logo a {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Menu List Styling */
+#navbar-menu {
+  display: flex;
+  list-style: none;
+}
+
+#navbar-menu li {
+  margin: 0 1.5rem;
+}
+
+#navbar-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+#navbar-menu a:hover {
+  color: #fd5f00; 
+}
+
+/* Hamburger Menu Button Styling */
+#toggle-menu {
+  display: none;
+  background: none;
+  border: none;
+ 
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Toggle button is displayed */
+  #toggle-menu {
+    display: flex;
+  }
+
+  /* Hide menu by default in mobile view */
+  #navbar-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    justify-content: center;
+    width: 80%;
+    background-color: #0d1128;
+    z-index: 1000;
+    padding: 1rem 0;
+    height: auto;
+  }
+
+  #navbar-menu.active {
+    display: flex;
+  }
+
+  #navbar-menu li {
+    margin: 1rem 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo a {
+    font-size: 1.2rem;
+  }
+
+  #navbar-menu a {
+    font-size: 0.9rem;
+  }
+
+  #toggle-menu {
+    font-size: 1.5rem;
+  }
+}
+
+/* Video Section Styling */
+.video-section {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;    /* Center vertically */
+  height: 100vh;          /* Full viewport height */
+  margin: 0;
+  padding: 0;
+}
+
+.video-section iframe {
+  width: 50%;
+  height: 60%;
+  border: none; /* Remove iframe border */
+  margin-top: -90px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .video-section iframe {
+    width: 80%; /* Adjust width for smaller screens */
+    height: 50%; /* Adjust height for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .video-section iframe {
+    width: 100%; /* Full width for very small screens */
+    height: 50%; /* Keep proportional height */
+  }
+}
+
+/* Hero Section Styling */
+.Hero_sec {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.testimonial-carousel {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.Hero_card {
+  min-width: 30%; /* Show 3 cards at a time */
+  margin: 0 10px;
+  background: white;
+  border: 3px inset #1a4375; /* Inset border style */
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.Hero_card h3 {
+  font-size: 1.2rem;
+  color: #1a4375;
+  margin-bottom: 10px;
+}
+
+.Hero_card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.Hero_img img {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  /* background-color: #1a4375; */
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.carousel-prev {
+  left: 0;
+}
+
+.carousel-next {
+  right: 0;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+  background-color: #1a4375cc;
+}
+
+/* Parent Container Styling */
+.Hero_sec {
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Section Styling */
+.video-content-section {
+  padding: 3rem 1rem;
+  /* background: linear-gradient(135deg, #e8f5e9, #efa879);  */
+}
+
+.container {
+  display: flex;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Ensure responsiveness */
+  align-items: center;
+}
+
+/* Video Section */
+.video-container {
+  flex: 1 1 50%; /* Takes 50% width */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.video-container video {
+  width: 80%;
+  height: 20%;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Elegant shadow */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.video-container video:hover {
+  transform: scale(1.02); /* Slight zoom effect on hover */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Content Section */
+.content-container {
+  flex: 1 1 50%; /* Takes 50% width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+}
+
+.content-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #0b0b0b; /* Professional green color */
+}
+
+.content-container p {
+  margin-bottom: 1rem;
+  color: #050505; /* Neutral text color */
+  line-height: 1.8;
+}
+
+.cta-button {
+  margin-top: 1rem;
+  padding: 0.8rem 2rem;
+  background: #eb7d15;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  background: #1b5e20; /* Darker green */
+  transform: translateY(-3px); /* Slight lift on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center; /* Center align text for smaller screens */
+  }
+
+  .video-container,
+  .content-container {
+    flex: 1 1 100%; /* Full width for both video and content */
+  }
+
+  .content-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .cta-button {
+    width: 100%; /* Full-width button */
+  }
+}
+
+
+
+
+
+
+
+
 
 
         /* Basic styling for the menu */
@@ -294,7 +699,7 @@ button:hover {
     /* background-color: rgb(0, 0, 0, 0.6); */
 }
 
-
+/* 
 .Home_main h1, h3{
    text-align: center; 
 }
@@ -307,7 +712,8 @@ button:hover {
     padding:20px;
     text-align:center;
     justify-content: center;
-}
+} */
+
 
  .Home_main button{
     margin:20px 0px 90px 520px;
@@ -347,102 +753,7 @@ button:hover {
   }
 }
 
-.navbar {
-  background-color: #0d1128; 
-  /*background: linear-gradient(0deg, rgba(6,38,104,1) 100%, rgba(255,255,255,1) 100%);*/
-  width: 100%;
-}
 
-.nav_main {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-}
-
-/* Styling for the menu list */
-#navbar-menu {
-  display: flex;
-
-  list-style: none;
-  margin-left: 50px;
-  padding: 0;
-}
-
-#navbar-menu li {
-  margin: 0 2rem;
-}
-
-#navbar-menu a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.3s;
-}
-
-#navbar-menu a:hover {
-  color:#fd5f00; /* Replace with your hover color */
-}
-
-/* Search bar styling */
-.nav_2 input {
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  border: 1px solid #ccc;
-  outline: none;
-  font-size: 1rem;
-  background-color: #fff;
-}
-
-/* Mobile view */
-@media (max-width: 768px) {
-  /* Hide menu by default and change layout */
-  #navbar-menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    bottom: -170px;
-    left: -50px;
-    width: 100%;
-    background-color: #0d1128;
-    z-index: 1000;
-    padding: 1rem 0;
-  }
-
-  #navbar-menu.active {
-    display: flex; /* Show the menu when active */
-  }
-
-  #navbar-menu li {
-    margin: 1rem 0; /* Vertical spacing for mobile view */
-    text-align: center;
-  }
-
-  /* Toggle button styling */
-  #toggle-menu {
-    display: flex;
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 1.5rem;
-    cursor: pointer;
-  }
-
-  /* Responsive search bar */
-  .nav_2 {
-    margin-top: 1rem;
-    text-align: center;
-    width: 100%;
-  }
-
-  .nav_2 input {
-    width: 90%;
-  }
-  
-  .offer{
-    background-image: none;
-  }
-}
 /*.offer {*/
 /*  width: 100%;*/
 /*  background-image: url(images/what\ we\ offer\ backgound\ image[1].png);*/
@@ -772,17 +1083,164 @@ button:hover {
 /*     background-color: #959798;*/
 /*}*/
 
+/* General Styling */
+.our-services {
+  padding: 50px 20px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.services-heading {
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+  animation: bounceIn 1s ease-in-out;
+}
+
+.services-heading img {
+  width: 80px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.services-heading h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-top: 10px;
+}
+
+/* Card Layout */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: calc(25% - 10px);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card h3 {
+  margin-top: 15px;
+  color: #121212;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.card ul li {
+  color: #080808;
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+  word-spacing: 2px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .card {
+    width: calc(45% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+
+  .services-heading h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Animations */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px; /* Match the card's border-radius */
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.8), transparent);
+  background-size: 200% 200%;
+  animation: sparkle-border 2s infinite linear;
+  opacity: 0;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+@keyframes sparkle-border {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.Footer_col3 li{
+  color: white;
+}
+
     </style>
 </head>
 
 <body>
-  <!-- ****************************************** -->
+
   <div class="header">
     <div class="header_main">
       <div class="header_1">
-        <img style="height: 160px; width: 170px;" src="images/jurislogo-removebg-preview.png" />
+        <img src="images/jurislogo-removebg-preview.png" alt="Juris Logo" />
       </div>
-      <!-- ****************************************** -->
       <div class="header_2">
         <div class="header_2_col1">
           <div class="header_icon">
@@ -790,12 +1248,13 @@ button:hover {
           </div>
           <div class="header_email">
             <h5>Email</h5>
-            <a href="mailto:info.jurisstudy@gmail.com?subject=Requirements&body=Hi%20team%20JurisStudy,%0A%0AI%20have%20the%20following%20requirements:"><p>info.jurisstudy@gmail.com</p></a>
-
+            <a href="mailto:info.jurisstudy@gmail.com?subject=Requirements&body=Hi%20team%20JurisStudy,%0A%0AI%20have%20the%20following%20requirements:">
+              <p>info.jurisstudy@gmail.com</p>
+            </a>
           </div>
         </div>
         <div class="header_2_col1">
-          <div style="margin-left: -18px;" class="header_icon">
+          <div class="header_icon">
             <i class="fa-solid fa-phone"></i>
           </div>
           <div class="header_email">
@@ -804,13 +1263,13 @@ button:hover {
           </div>
         </div>
       </div>
-      <!-- ****************************************** -->
       <div id="apply-now-btn" class="header_3">
         <button type="button">Let's Connect</button>
       </div>
     </div>
   </div>
-  <!-- ****************************************** -->
+  
+
   <nav class="navbar">
   <div class="nav_main">
     <button id="toggle-menu" aria-label="Toggle Menu">☰</button>
@@ -825,17 +1284,13 @@ button:hover {
       <li><a href="blog.html">BLOG</a></li>
       <li><a href="contact.html">CONTACT US</a></li>
     </ul>
-    
-    <!-- Search bar -->
-    <!-- <div class="nav_2">
-      <input type="search" name="" id="search-input" placeholder="Search" />
-    </div> -->
   </div>
 </nav>
 
   <div id="whatsapp">
     <a href="https://wa.me/918585915496?text=Hello, I would like to connect."><div id="whatsappMain"></div></a>
 </div>
+
 
   <!-- ****************************************** -->
 
@@ -861,383 +1316,226 @@ button:hover {
     </div>
 </div>
 
-  <div class="Home">
-   
-    <div class="Home_main">
-      
-      <h1>Are you looking for legal research</h1>
-      <h1>professional support?</h1>
-      <h3>Hire us to, flexibly manage your projects and ensure quality results.</h3>
-      <p>
-      We help students, professionals, and scholars lead successful careers in different <br> areas of legal research and analysis, ensuring productivity and systematic workflows.
-      </p>
-      <a href="mailto:info.jurisstudy@gmail.com?subject=Requirements&body=Hi%20team%20JurisStudy,%0A%0AI%20have%20the%20following%20requirements:" target="_blank">
-        <button>Explore More</button>
-      </a>
-      
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img  class="d-block w-100" src="images/ARE_YOU_LOOKING_FOR_LEGAL.png" alt="First slide">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 style="color: black;">Are you looking for legal research professionals?</h5>
+          <p>Explore More</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img  class="d-block w-100" src="data:image/jpeg;base64,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" alt="Second slide">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>...</h5>
+          <p>...</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img  class="d-block w-100" src="data:image/jpeg;base64,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" alt="Third slide">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>...</h5>
+          <p>...</p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  
+  <section class="video-content-section">
+    <div class="container">
+      <!-- Video Section -->
+      <div class="video-container">
+        <video controls autoplay muted loop>
+          <source src="juris video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+  
+      <!-- Content Section -->
+      <div class="content-container">
+        <h1>Welcome to jurisstudy</h1>
+        <p>
+          We are a team of experienced legal researchers, who help students, professionals, and scholars build their academic portfolios stronger. 
+        </p>
+        <p>
+          As we all can easily find a major gap in our educational system, which binds an individual to theoretical concepts and does not allow them to gain practical insights and knowledge, we ensure to offer customized legal research support to every person, who has a dream to upscale their careers in academic field.
+        </p>
+        <p>
+         
+  If you are also curious, about knowing the ways to write a top-notch legal research paper, with all citations and references in place, prepare a well-planned dissertation, craft a compelling thesis, or align your moot court memorial, we will offer you, personalized support at every step from, planning to execution.
+  
+  Let's connect to prepare a smooth platform for your legal research journey, stand out with high-tech skills and abilities, and be future industrial leaders.
+        </p>
+        <span style="font-weight: bolder; font-size: 1.5rem;">Be a part of India’s strongest legal research community...</span>
+      </div>
+    </div>
+  </section>
+
+<!-- Video Section -->
+<!-- <section class="video-section">
+  <iframe  style="width: 700px;"
+    src="juris video.mp4" 
+    frameborder="0" 
+    allow="autoplay; encrypted-media" 
+    allowfullscreen
+    title="Our Video"
+  ></iframe>
+</section> -->
+<!-- <div class="University">
+  <div class="University0">
+    <div class="univ_main1">
+      <div class="univ_main1_col1">
+        <video controls>
+          <source src="juris video.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="univ_main1_col2">
+        <h1>JurisStudy</h1>
+        <p>
+          We are a team of experienced legal researchers, who help students, professionals, and scholars build their academic portfolios stronger.
+        </p>
+        <p>
+          As we all can easily find a major gap in our educational system, which binds an individual to theoretical concepts and does not allow them to gain practical insights and knowledge, we ensure to offer customized legal research support to every person, who has a dream to upscale their careers in the academic field.
+        </p>
+        <p>
+          If you are also curious about knowing the ways to write a top-notch legal research paper, with all citations and references in place, prepare a well-planned dissertation, craft a compelling thesis, or align your moot court memorial, we will offer you personalized support at every step, from planning to execution.
+        </p>
+        <p>
+          Let's connect to prepare a smooth platform for your legal research journey, stand out with high-tech skills and abilities, and be future industrial leaders.
+        </p>
+      </div>
+    </div>
+    <div class="univ_footer">
+      <h3>Be a part of India’s strongest legal research community...</h3>
     </div>
   </div>
+</div> -->
+
+
   <!-- ****************************************** -->
   <div class="Hero_sec">
-    <div class="Hero_main">
-      <div class="Hero_col1">
+    <div class="testimonial-carousel">
+      <!-- Card 1 -->
+      <div class="Hero_card">
         <div class="Hero_img">
-          <img style="height:90px; width:100px" src="https://cdn-icons-png.flaticon.com/512/1995/1995539.png" />
+          <img src="https://cdn-icons-png.flaticon.com/512/1995/1995539.png" alt="Icon 1" />
         </div>
         <h3>Trained Legal Professionals</h3>
         <p>
           You can access customized legal research solutions and an in-depth training module befitting your specific requirements with our trained legal experts.
         </p>
       </div>
-      <div class="Hero_col2">
-         <img src="./images/icons1.png" />
+  
+      <!-- Card 2 -->
+      <div class="Hero_card">
+        <div class="Hero_img">
+          <img src="./images/icons1.png" alt="Icon 2" />
+        </div>
         <h3>Quality-Assurance</h3>
         <p>
-          Our primary focus lies, in ensuring a quality streak in creating and maintaining your legal projects and helping individuals to become a brand in a highly competitive zone.
+          Our primary focus lies in ensuring a quality streak in creating and maintaining your legal projects and helping individuals to become a brand in a highly competitive zone.
         </p>
       </div>
-      <div class="Hero_col1">
-        <img style="height:90px; width:100px" src="./images/icons2.png" />
+  
+      <!-- Card 3 -->
+      <div class="Hero_card">
+        <div class="Hero_img">
+          <img src="./images/icons2.png" alt="Icon 3" />
+        </div>
         <h3>Customer-Friendly Approach</h3>
         <p>
           We offer a convenient platform for our customers to access our reliable support and stand out with top-notch legal research skills and expertise in the industry.
         </p>
       </div>
-      <div class="Hero_col2">
-        <img src="./images/icons3.png" />
+  
+      <!-- Card 4 -->
+      <div class="Hero_card">
+        <div class="Hero_img">
+          <img src="./images/icons3.png" alt="Icon 4" />
+        </div>
         <h3>Affordable Costs</h3>
         <p>
-          At an affordable price range, we aim to bring a fresh perspective to, the, table which matches, your budgetary compliances and legal project needs.
+          At an affordable price range, we aim to bring a fresh perspective to the table which matches your budgetary compliances and legal project needs.
         </p>
       </div>
     </div>
-  </div>
-  <!-- ****************************************** -->
-  <div class="offer">
-    <div class="offer_main">
-      <div class="offer_1">
-        <div class="offers">
-          <h1>What We Offer</h1>
-          <p style="color: black;" class="offer_p">
-            Adopting a way forward approach we provide you with a well-equipped legal research training program and services like writing research papers, articles, essays, preparing dissertations, thesis, case studies moot court memorials, etc.
   
-          </p>
-        </div>
-     
-        <!-- ****************************************** -->
-        <div class="offer_mid_col">
-          <!-- ****************************************** -->
-          <div class="offer_col">
-            <div class="offer_col_1">
-              <img style="padding-top: 10px;"  src="./images/Icon1-removebg-preview.png" alt="" />
-            </div>
-            <div style="margin-top: -20px;" class="offer_col_2">
-              <h3 >Innovative Learning Space
-              </h3>
-              <p  style="text-align: justify;">
-                Our first duty is to provide you with a healthy environment to learn grow and fully manifest your legal talent and access fantastic future opportunities.
-              </p>
-            </div>
-          </div>
-          <div class="offer_col">
-            <div class="offer_col_1">
-              <img src="./images/Icon2-removebg-preview.png" alt="" />
-            </div>
-            <div class="offer_col_2">
-              <h3 style="margin-top: 8px;">Internship Opportunities</h3>
-              <p style="text-align: justify;">
-                You have opportunities to explore wonderful internship programs with us.
-              We will help upscale your legal research experiences and enliven, your writing skills to ensure you reach a successful platform in the industry.
-                
-              </p>
-            </div>
-          </div>
-
-          <div class="offer_col">
-            <div class="offer_col_1">
-              <img src="./images/Icon3-removebg-preview.png" alt="" />
-            </div>
-            <div class="offer_col_2">
-              <h3 >Customized Research Programs</h3>
-              <p style="text-align: justify;">
-                We will offer you the most advanced legal research programs with knowledge of relevant tools and practical-based scenarios to help get, you a dream job in the future.
-                
-              </p>
-            </div>
-          </div>
-          
-          <!-- ****************************************** -->
-     
-          <div class="offer_col">
-            <div class="offer_col_1">
-              <img src="./images/Icon4-removebg-preview.png" alt="" />
-            </div>
-            <div class="offer_col_2">
-              <h3 >Enriching Legal Research Opportunities</h3>
-              <p style="text-align: justify;">
-                With high-tech legal training programs, we open doors for you to access trending legal opportunities and platforms and help you respond to upcoming opportunities faster.
-
-              </p>
-            </div>
-          </div>
-          <!-- ****************************************** -->
-          <div class="offer_col">
-            <div class="offer_col_1">
-              <img src="./images/Icon5-removebg-preview.png" alt="" />
-            </div>
-            <div class="offer_col_2">
-              <h3 >Legal Research Guide/Tutorial
-              </h3>
-              <p style="text-align: justify;">
-                The law industry has made tremendous progress in the last few years.
-                We aim to educate law students and professionals in performing ideal research through a systematic guide/tutorial
-                
-              </p>
-            </div>
-          </div>
-          <div class="offer_col">
-            <div class="offer_col_1">
-              <img src="./images/Icon6-removebg-preview.png" alt="" />
-            </div>
-            <div style="margin-top: 15px;" class="offer_col_2">
-              <h3>Free-Counselling Sessions</h3>
-              <p style="text-align: justify;">
-                Get free legal research counseling sessions from our experts with a diverse range of experience in the industry.
-Our law tech experts help you throughout the journey of law school and help you build a professional career in legal research and analysis.
-
-              </p>
-            </div>
-          </div>
-          <!-- ****************************************** -->
-        </div>
-        <!-- ****************************************** -->
-      </div>
-      <!-- <div class="offer_2">
-        <img src="./images/about.jpg" alt="" />
-      </div> -->
-    </div>
+    <!-- Navigation Arrows -->
+    <button class="carousel-prev">&lt;</button>
+    <button class="carousel-next">&gt;</button>
   </div>
+  
+  
   <!-- ****************************************** -->
-  <div class="University">
-    <div class="University0">
-      <div class="univ_main1">
-        <div class="univ_main1_col1">
-          <video controls>
-            <source src="./images/Introducing Stanley.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <div class="univ_main1_col2">
-          <h1>jurisstudy
-          </h1>
-          <p style="  text-align: justify;">
-           We are a team of experienced legal researchers, who help students, professionals, and scholars build their academic portfolios stronger.
 
-<p style=" margin-top: -16px;   text-align: justify;">As we all can easily find a major gap in our educational system, which binds an individual to theoretical concepts and does not allow them to gain practical insights and knowledge, we ensure to offer customized legal research support to every person, who has a dream to upscale their careers in academic field.</p>
+  <section class="our-services">
+    <div class="services-heading">
+      <h2>Our Services</h2>
+    </div>
+    <div class="cards">
+      <!-- Card 1 -->
+      <a href="academic-research.html" class="card">
+        <img src="#" alt="Academic Research">
+        <h3>Writing Academic Research Papers</h3>
+        <ul>
+          <li style="text-align: left;">✅Broad Expertise Across Legal Disciplines</li>
+          <li style="text-align: left;">✅ Systematic  Research Methodology</li>
+          <li style="text-align: left;">✅Quality Assurance and Professional Presentation</li>
+        </ul>
+      </a>
+  
+      <!-- Card 2 -->
+      <a href="dissertation.html" class="card">
+        <img src="#" alt="Dissertation">
+        <h3>Preparing Dissertations</h3>
+        <ul>
+          <li style="text-align: left;">✅Strategic Dissertation Planning</li>
+          <li style="text-align: left;">✅Comprehensive Research and Analysis</li>
+          <li style="text-align: left;">✅Continuous Feedback and Review Process</li>
+        </ul>
+      </a>
+  
+      <!-- Card 3 -->
+      <a href="thesis.html" class="card">
+        <img src="#" alt="Thesis">
+        <h3>Crafting Compelling Thesis</h3>
+        <ul>
+          <li style="text-align: left;">✅Customized Thesis Structuring and Development</li>
+          <li style="text-align: left;">✅Incorporation of Scholarly Perspectives</li>
+          <li style="text-align: left;">✅Final Presentation and Quality Standards</li>
+        </ul>
+      </a>
+  
+      <!-- Card 4 -->
+      <a href="moot-court-memorials.html" class="card">
+        <img src="#" alt="Moot Court Memorials">
+        <h3>Designing Interactive Moot Court Memorials</h3>
+        <ul>
+          <li style="text-align: left;">✅Personalized Memorial Development</li>
+          <li style="text-align: left;">✅Advanced Legal Research and Persuasive Writing</li>
+          <li style="text-align: left;">✅Comprehensive Training and Mock Sessions</li>
+        </ul>
+      </a>
+    </div>
+  </section>
+  
+  
 
-          </p>
-          <p style=" text-align: justify; margin-top:-35px;">
-            If you are also curious, about knowing the ways to write a top-notch legal research paper, with all citations and references in place, prepare a well-planned dissertation, craft a compelling thesis, or align your moot court memorial, we will offer you, personalized support at every step from, planning to execution.
-          </p>
-          <p  style=" margin-top: -16px;  text-align: justify;">Let's connect to prepare a smooth platform for your legal research journey, stand out with high-tech skills and abilities, and be future industrial leaders.</p>
-        
-        </div>
-      </div>
-      <div>
-        <h3>Be a part of India’s strongest legal research community...</h3>
-      </div>
+
+
+
 
    
-      <!-- <div class="univ_main2">
-        <div class="univ_main2_col1">
-          <h1>18</h1>
-          <p>Certified Teachers</p>
-        </div>
-        <div class="univ_main2_col1">
-          <h1>401</h1>
-          <p>Students</p>
-        </div>
-        <div class="univ_main2_col1">
-          <h1>30</h1>
-          <p>Courses</p>
-        </div>
-        <div class="univ_main2_col1">
-          <h1>50</h1>
-          <p>Awards Won</p>
-        </div>
-      </div> -->
-    </div>
-  </div>
-  <!-- ****************************************** -->
-  <div class="Courses">
-    <h1 class="main-h2">Our Services</h1>
-    <p class="main-p">
-      What sets us apart in the legal research industry is our unique talent, to collaborate with top-notch law universities and leading personalities in the concerned field.
-    </p>
-    <p class="main-p">We have clients from all across the world with a high reputation and standards in the legal society.</p>
-    <!-- ***************************** -->
-    <div class="Courses_main">
-      <!-- ***************************** -->
-      <div class="Courses_col1">
-        <img src="./images/course-1.jpg" alt="" />
-        <!-- <div class="Course_mid">
-          <div class="Course_mid1">
-            <h5><i class="fa-solid fa-user"></i> MR KHAN</h5>
-          </div>
-          <div class="Course_mid1">
-            <h5><i class="fa-solid fa-table-cells"></i> 10 SEATS</h5>
-          </div>
-          <div class="Course_mid1">
-            <h5><i class="fa-regular fa-calendar-days"></i> 4 YEARS</h5>
-          </div>
-        </div> -->
-        <h2>Writing Academic Research Papers</h2>
-        <p>
-          With profound experience in legal research and writing, our experts are well-versed in preparing high-profile research papers on any legal subject matter, based on the client’s needs.
-        </p>
-        <!-- <button class="btn2">Apply Now</button> -->
-      </div>
-      <!-- ***************************** -->
-      <div class="Courses_col1">
-        <img src="./images/course-2.jpg" alt="" />
-        <!-- <div class="Course_mid">
-          <div class="Course_mid1">
-            <h5><i class="fa-solid fa-user"></i> MR KHAN</h5>
-          </div>
-          <div class="Course_mid1">
-            <h5><i class="fa-solid fa-table-cells"></i> 10 SEATS</h5>
-          </div>
-          <div class="Course_mid1">
-            <h5><i class="fa-regular fa-calendar-days"></i> 4 YEARS</h5>
-          </div>
-        </div> -->
-        <h2>Preparing Dissertations</h2>
-        <p>
-          We have an advanced approach to completing your long dissertation projects, effectively based on your unique needs and preferences, and make your law journey much smoother.
-        </p>
-        <!-- <button class="btn2">Apply Now</button> -->
-      </div>
-      <!-- ***************************** -->
-      <div class="Courses_col1">
-        <img src="./images/course-3.jpg" alt="" />
-        <!-- <div class="Course_mid">
-          <div class="Course_mid1">
-            <h5><i class="fa-solid fa-user"></i> MR KHAN</h5>
-          </div>
-          <div class="Course_mid1">
-            <h5><i class="fa-solid fa-table-cells"></i> 10 SEATS</h5>
-          </div>
-          <div class="Course_mid1">
-            <h5><i class="fa-regular fa-calendar-days"></i> 4 YEARS</h5>
-          </div>
-        </div> -->
-        <h2>Crafting Compelling Thesis</h2>
-        <p>
-          Having a wide range of experience with multiple legal research scholars, our professionals are experts in designing the most compelling thesis to help you stand out with a unique academic piece.
-        </p>
-        <!-- <button class="btn2">Apply Now</button> -->
-      </div>
-      <!-- ***************************** -->
-      <div class="Courses_col1">
-        <img src="./images/course-4.jpg" alt="" />
-        <!-- <div class="Course_mid">
-          <div class="Course_mid1">
-            <h5><i class="fa-solid fa-user"></i> MR KHAN</h5>
-          </div>
-          <div class="Course_mid1">
-            <h5><i class="fa-solid fa-table-cells"></i> 10 SEATS</h5>
-          </div>
-          <div class="Course_mid1">
-            <h5><i class="fa-regular fa-calendar-days"></i> 4 YEARS</h5>
-          </div>
-        </div> -->
-        <h2>Designing Interactive Moot Court Memorials</h2>
-        <p>
-          Our legal experts have, extensive, experience in training moot court practitioners and adjudging the chair.
-Get a well-customized moot court memorial and shine at the top of your law school.
-
-        </p>
-        <!-- <button class="btn2">Apply Now</button> -->
-      </div>
-      <!-- ***************************** -->
-    </div>
-    <a href="mailto:info.jurisstudy@gmail.com?subject=Requirements&body=Hi%20team%20JurisStudy,%0A%0AI%20have%20the%20following%20requirements:" target="_blank">
-      <button class="btn">Send Us Your Requirement</button>
-    </a>
-  </div>
-  <!-- ****************************************** -->
-  <div class="Teachers">
-    <h1 class="main-h2">Our Legal Research Practical Guides/Tutorials</h1>
-    <p  class="main-p">
-      We have inline the most demanding legal research training programs to, systematically make you an expert researcher and analyst.
-    </p>
-    <p class="main-p"></p>
-    <div class="Teachers_main">
-      <div class="Teachers_col1">
-        <img style="height: 290px;" src="https://www.dhakalawreview.org/wp-content/uploads/2015/08/istock_000000641322medium.jpg" alt="" />
-        <!-- <div class="teacher_soical_icons">
-          <i class="fa-brands fa-facebook"></i>
-          <i class="fa-brands fa-instagram"></i>
-          <i class="fa-brands fa-twitter"></i>
-          <i class="fa-brands fa-linkedin"></i>
-        </div> -->
-        <div class="Teacher_Mid1">
-          <h2>Research Paper Guide/Tutorial</h2>
-          <!-- <h4>TEACHER</h4> -->
-          <p>
-            Upscale your legal research abilities with practical knowledge and understanding of different practical scenarios and tools necessary to build a unique user experience.
-          </p>
-        </div>
-      </div>
-      <div class="Teachers_col1">
-        <img style="height: 290px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmCT9pnq2hw4Uk82NoRMbAn-TmpHp4zK0xqA&s" alt="" />
-        <!-- <div class="teacher_soical_icons">
-          <i class="fa-brands fa-facebook"></i>
-          <i class="fa-brands fa-instagram"></i>
-          <i class="fa-brands fa-twitter"></i>
-          <i class="fa-brands fa-linkedin"></i>
-        </div> -->
-        <div class="Teacher_Mid1">
-          <h2>Dissertation Guide/Tutorial</h2>
-          <!-- <h4>ENGLISH TEACHER</h4> -->
-          <p>
-            Master the most effective ways to write a perfect and outstanding dissertation in your law school with this advanced legal research practical course.
-          </p>
-        </div>
-      </div>
-      <div class="Teachers_col1">
-        <img style="height: 290px;" src="https://www.dhakalawreview.org/wp-content/uploads/2015/08/istock_000000641322medium.jpg" alt="" />
-        <!-- <div class="teacher_soical_icons">
-          <i class="fa-brands fa-facebook"></i>
-          <i class="fa-brands fa-instagram"></i>
-          <i class="fa-brands fa-twitter"></i>
-          <i class="fa-brands fa-linkedin"></i>
-        </div> -->
-        <div class="Teacher_Mid1">
-          <h2>Thesis Guide/<br>Tutorial</h2>
-          <!-- <h4>ART TEACHER</h4> -->
-          <p>
-            Here is a master tutorial guide to help you stand out in your law university with a strong thesis.
-          </p>
-        </div>
-      </div>
-      <div class="Teachers_col1">
-        <img style="height: 290px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmCT9pnq2hw4Uk82NoRMbAn-TmpHp4zK0xqA&s" alt="" />
-        <!-- <div class="teacher_soical_icons">
-          <i class="fa-brands fa-facebook"></i>
-          <i class="fa-brands fa-instagram"></i>
-          <i class="fa-brands fa-twitter"></i>
-          <i class="fa-brands fa-linkedin"></i>
-        </div> -->
-        <div class="Teacher_Mid1">
-          <h2>Moot Court Memorial Guide/Tutorial</h2>
-          <!-- <h4>SCIENCE TEACHER</h4> -->
-          <p>
-            Access this customized moot court memorial tutorial guide to gain an in-depth understanding of processes, regulations, and standards that, have, to be followed while preparing an ideal memorial.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
+      
   <!-- ****************************************** -->
   <div class="Form">
     <!-- <div class="Form0">
@@ -1267,7 +1565,7 @@ Get a well-customized moot court memorial and shine at the top of your law schoo
       </div>
     </div> -->
     <!-- ****************************************** -->
-    <div style="margin-top: -100px;" class="Blog">
+    <!-- <div style="margin-top: -100px;" class="Blog">
       <h1 class="main-h2">Our Blogs</h1>
       <p class="main-p">
         Read our enriching blogs on legal research gaps, challenges, and future scope in the contemporary world.
@@ -1276,58 +1574,46 @@ Get a well-customized moot court memorial and shine at the top of your law schoo
       <div class="Blog_main">
         <div class="Blog_col1">
           <img src="./images/image_1.jpg" alt="">
-          <!-- <div class="Blog_date">
-            <h4>26</h4>
-            <h5>June</h5>
-            <h5>2023</h5>
-          </div> -->
+     
           <div class="Blog_center">
             <h2>Failure Of the Practical Application Of The Legal Research in Majority Law Schools</h2>
             <p>In today’s fast-evolving legal landscape, the ability to conduct effective legal research is more critical than ever. However, many law schools are falling short in preparing students for real-world applications. This blog delves into the disconnect between theoretical knowledge and practical skills, highlighting key challenges faced by students and educators alike.</p>
             <div class="Blog_mid_main">
               <button class="btn2">Read More </button>
-              <!-- <h3>Admin <i class="fa-solid fa-message"></i> 3</h3> -->
+             
             </div>
           </div>
         </div>
-        <!-- ****************************************** -->
+       
         <div class="Blog_col1">
           <img src="./images/image_2.jpg" alt="">
-          <!-- <div class="Blog_date">
-            <h4>26</h4>
-            <h5>June</h5>
-            <h5>2023</h5>
-          </div> -->
+     
           <div class="Blog_center">
             <h2>Failure Of the Practical Application Of The Legal Research in Majority Law Schools</h2>
             <p>In today’s fast-evolving legal landscape, the ability to conduct effective legal research is more critical than ever. However, many law schools are falling short in preparing students for real-world applications. This blog delves into the disconnect between theoretical knowledge and practical skills, highlighting key challenges faced by students and educators alike.</p>
             <div class="Blog_mid_main">
               <button class="btn2">Read More </button>
-              <!-- <h3>Admin <i class="fa-solid fa-message"></i> 3</h3> -->
+             
             </div>
           </div>
         </div>
         <div class="Blog_col1">
           <img src="./images/image_3.jpg" alt="">
-          <!-- <div class="Blog_date">
-            <h4>26</h4>
-            <h5>June</h5>
-            <h5>2023</h5>
-          </div> -->
+     
           <div class="Blog_center">
             <h2>Failure Of the Practical Application Of The Legal Research in Majority Law Schools</h2>
             <p>In today’s fast-evolving legal landscape, the ability to conduct effective legal research is more critical than ever. However, many law schools are falling short in preparing students for real-world applications. This blog delves into the disconnect between theoretical knowledge and practical skills, highlighting key challenges faced by students and educators alike.</p>
             <div class="Blog_mid_main">
               <button class="btn2">Read More </button>
-              <!-- <h3>Admin <i class="fa-solid fa-message"></i> 3</h3> -->
+           
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- ****************************************** -->
+    </div> -->
+    
     <section class="testimonials">
-      <h2 style="margin-top: -30px;">Our Clients</h2>
+      <h2 style="margin-top:30px;">Our Clients</h2>
       <div class="testimonial-container">
           <div class="testimonial">
             <div class="Testimonial_Mid1">
@@ -1364,7 +1650,7 @@ Get a well-customized moot court memorial and shine at the top of your law schoo
           <p> <i class="fa-solid fa-location-dot"></i>Alpha 1  Commercial Belt, Greater Noida, U.P, India 201310
           </p>
           <p> <i class="fa-solid fa-phone"></i>+91 8585915496</p>
-          <p><i class="fa-solid fa-envelope"></i><a href="mailto:info.jurisstudy@gmail.com?subject=Requirements&body=Hi%20team%20JurisStudy,%0A%0AI%20have%20the%20following%20requirements:">info.jurisstudy@gmail.com</a>
+          <p><i class="fa-solid fa-envelope"></i><a style="color: white;" href="mailto:info.jurisstudy@gmail.com?subject=Requirements&body=Hi%20team%20JurisStudy,%0A%0AI%20have%20the%20following%20requirements:">info.jurisstudy@gmail.com</a>
 </p>
         </div>
         <!-- ************************* -->
@@ -1397,13 +1683,13 @@ Get a well-customized moot court memorial and shine at the top of your law schoo
         <div class="Footer_col3">
           <h2>Quick Links</h2>
           <ul>
-            <li><i class="fa-solid fa-arrow-right"></i> <a href="index.html">Home</a></li>
-            <li><i class="fa-solid fa-arrow-right"></i> <a href="about.html">About Us</a></li>
-            <li><i class="fa-solid fa-arrow-right"></i> <a href="research.html">Research and Academia</a></li>
-            <li><i class="fa-solid fa-arrow-right"></i> <a href="services.html">Our Services</a></li>
-            <li><i class="fa-solid fa-arrow-right"></i> <a href="intellectualpieces.html">INTELLECTUAL PIECES</a></li>
-            <li><i class="fa-solid fa-arrow-right"></i> <a href="blog.html">Blog</a></li>
-             <li><i class="fa-solid fa-arrow-right"></i> <a href="contact.html">Contact Us</a></li>
+            <li><i class="fa-solid fa-arrow-right"></i> <a style="color: white;" href="index.html">Home</a></li>
+            <li><i class="fa-solid fa-arrow-right"></i> <a style="color: white;" href="about.html">About Us</a></li>
+            <li><i class="fa-solid fa-arrow-right"></i> <a style="color: white;" href="research.html">Research and Academia</a></li>
+            <li><i class="fa-solid fa-arrow-right"></i> <a style="color: white;" href="services.html">Our Services</a></li>
+            <li><i class="fa-solid fa-arrow-right"></i> <a style="color: white;" href="intellectualpieces.html">INTELLECTUAL PIECES</a></li>
+            <li><i class="fa-solid fa-arrow-right"></i> <a style="color: white;" href="blog.html">Blog</a></li>
+             <li><i class="fa-solid fa-arrow-right"></i> <a style="color: white;" href="contact.html">Contact Us</a></li>
           </ul>
         </div>
         <!-- ************************* -->
@@ -1414,13 +1700,13 @@ Get a well-customized moot court memorial and shine at the top of your law schoo
     <p id="subscribeMessage" class="hidden">Thank you for subscribing!</p>
           <h2>Connect With Us </h2>
           <div class="social_icons">
-            <a href="https://wa.me/918585915496"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="https://www.linkedin.com/company/jurisstudy/"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://www.youtube.com/@jurisstudy"><i class="fa-brands fa-youtube"></i></a>
-             <a href=https://x.com/infojurisstudy><i class="fa-brands fa-x-twitter"></i></a>
-             <a href="https://www.facebook.com/people/Jurisstudy/61566563361135/"><i class="fa-brands fa-facebook"></i></a>
-             <a href="https://www.instagram.com/info.jurisstudy/"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://medium.com/@info.jurisstudy"><i class="fa-brands fa-medium"></i></a>
+            <a style="color: white;" href="https://wa.me/918585915496"><i class="fa-brands fa-whatsapp"></i></a>
+            <a style="color: white;" href="https://www.linkedin.com/company/jurisstudy/"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a style="color: white;" href="https://www.youtube.com/@jurisstudy"><i class="fa-brands fa-youtube"></i></a>
+             <a style="color: white;" href=https://x.com/infojurisstudy><i class="fa-brands fa-x-twitter"></i></a>
+             <a style="color: white;" href="https://www.facebook.com/people/Jurisstudy/61566563361135/"><i class="fa-brands fa-facebook"></i></a>
+             <a style="color: white;" href="https://www.instagram.com/info.jurisstudy/"><i class="fa-brands fa-instagram"></i></a>
+            <a style="color: white;" href="https://medium.com/@info.jurisstudy"><i class="fa-brands fa-medium"></i></a>
            
           </div>
         </div>
@@ -1512,6 +1798,27 @@ document.getElementById("toggle-menu").addEventListener("click", function() {
       return re.test(String(email).toLowerCase());
   }
   </script>
+
+  <script>
+    const carousel = document.querySelector('.testimonial-carousel');
+const prevButton = document.querySelector('.carousel-prev');
+const nextButton = document.querySelector('.carousel-next');
+
+let offset = 0;
+const cardWidth = 300 + 20; // Card width + gap
+
+prevButton.addEventListener('click', () => {
+  offset = Math.min(offset + cardWidth, 0); // Prevent scrolling beyond start
+  carousel.style.transform = `translateX(${offset}px)`;
+});
+
+nextButton.addEventListener('click', () => {
+  const maxOffset = -(carousel.scrollWidth - carousel.parentElement.offsetWidth);
+  offset = Math.max(offset - cardWidth, maxOffset); // Prevent scrolling beyond end
+  carousel.style.transform = `translateX(${offset}px)`;
+});
+
+  </script>
   
   <script>
         document.getElementById('subscribeBtn').addEventListener('click', function() {
@@ -1530,7 +1837,7 @@ document.getElementById("toggle-menu").addEventListener("click", function() {
             }
         });
     </script>
-  
+
  
     <!-- ****************************************** -->
 

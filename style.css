@@ -443,10 +443,10 @@ ul {
 /* ************************************* */
 .University {
   width: 100%;
-  background-image: url(./images/bg_3.jpg);
+  /* background-image: url(./images/bg_3.jpg); */
   background-position: center;
   background-size: cover;
-  height: 750px;
+  height: 780px;
   color: #fff;
 }
 .University p {
@@ -456,7 +456,7 @@ ul {
 .University0 {
   background: linear-gradient(45deg, #0d1128 0%, #fd6100 100%);
   opacity: 0.8;
-  height: 750px;
+  height: 780px;
 }
 .univ_main1 {
   padding: 7rem 4rem 3rem 4rem;
